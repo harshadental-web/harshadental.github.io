@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Harsha Dental Clinic</title>
+<title>Harsha Multi-Speciality Dental Clinic</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 body {
     margin:0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Arial;
     color:white;
-    background: linear-gradient(-45deg, #0f2027, #2c5364, #00c6ff, #0072ff);
+    background: linear-gradient(45deg, #0f2027, #2c5364, #00c6ff);
     background-size: 400% 400%;
-    animation: bg 12s infinite;
+    animation: bg 10s infinite;
 }
 @keyframes bg {
     0%{background-position:0%}
@@ -19,115 +19,119 @@ body {
     100%{background-position:0%}
 }
 
-.hero {
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+header {
     text-align:center;
+    padding:30px;
 }
 
-.btn {
-    padding:12px 25px;
-    background:#00c6ff;
-    border-radius:30px;
-    text-decoration:none;
-    color:white;
+h1 {
+    font-size:40px;
 }
 
-.card {
-    background: rgba(255,255,255,0.1);
-    margin:20px;
+.container {
     padding:20px;
-    border-radius:15px;
-    backdrop-filter: blur(10px);
-    text-align:center;
 }
 
+/* cards */
+.card {
+    background: rgba(0,0,0,0.6);
+    padding:20px;
+    margin:20px 0;
+    border-radius:15px;
+    box-shadow:0 0 15px cyan;
+}
+
+/* gallery */
 .gallery img {
-    width:250px;
+    width:100%;
+    max-width:300px;
     margin:10px;
     border-radius:10px;
+    box-shadow:0 0 10px white;
 }
 
-.whatsapp {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px;
-    border-radius:50%;
+/* buttons */
+.btn {
+    display:inline-block;
+    padding:12px 20px;
+    margin:10px;
+    background:cyan;
+    color:black;
     text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+/* responsive */
+@media(max-width:600px){
+    h1 {font-size:28px;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-    <h1>Harsha Multi Speciality Dental Clinic</h1>
-    <p>✨ Redefining Painless Dentistry ✨</p>
-    <a class="btn" href="#contact">Book Appointment</a>
+<header>
+    <h1>🦷 Harsha Multi-Speciality Dental Clinic</h1>
+    <p>Root Canal Expert | Painless Dentistry</p>
+</header>
+
+<div class="container">
+
+<!-- DOCTOR -->
+<div class="card">
+    <h2>👨‍⚕️ Doctor Details</h2>
+    <p><b>Dr. Harsha</b></p>
+    <p>Endodontist & Root Canal Specialist</p>
+    <p>10+ Years Experience</p>
 </div>
 
+<!-- TIMINGS -->
 <div class="card">
-    <h2>🦷 Our Services</h2>
-    <p>Teeth Whitening | Root Canal | Implants | Laser Dentistry | Surgery</p>
+    <h2>⏰ Timings</h2>
+    <p>Monday - Saturday: 9:00 AM – 9:00 PM</p>
+    <p>Sunday: 10:00 AM – 2:00 PM</p>
 </div>
 
-<!-- SLIDER -->
+<!-- CONTACT -->
 <div class="card">
-    <h2>🏥 Clinic View</h2>
-    <img id="slide" src="images/clinic1.jpg" width="80%">
+    <h2>📞 Contact</h2>
+
+    <!-- CALL BUTTON -->
+    <a href="tel:7416008370" class="btn">📞 Call Now</a>
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/917416008370" class="btn">💬 WhatsApp</a>
+
+</div>
+
+<!-- LOCATION -->
+<div class="card">
+    <h2>📍 Location</h2>
+
+    <iframe 
+    src="https://www.google.com/maps?q=Kakinada&output=embed"
+    width="100%" height="250" style="border:0;"></iframe>
+
 </div>
 
 <!-- GALLERY -->
 <div class="card">
-    <h2>📸 Gallery</h2>
-
-    <!-- 🔥 IMAGE LINKS -->
-    <img src="images/clinic1.jpg">
-    <img src="images/clinic2.jpg">
-    <img src="images/clinic3.jpg">
-    <img src="images/clinic4.jpg">
-    <img src="images/reception.jpg">
-    <img src="images/doctor.jpg">
+    <h2>🏥 Clinic Gallery</h2>
+    
+    <!-- IMPORTANT: correct file names -->
+    <div class="gallery">
+        <img src="clinic1.jpg.jpeg">
+        <img src="clinic2.jpg.jpeg">
+        <img src="clinic3.jpg.jpeg">
+        <img src="clinic4.jpg.jpeg">
+        <img src="doctor.jpg.jpeg">
+        <img src="reception.jpg.jpeg">
+    </div>
 
 </div>
 
-<!-- CONTACT -->
-<div class="card" id="contact">
-    <h2>📍 Contact</h2>
-    <p>Sri Lakshmi Complex, Kakinada</p>
-    <p>📞 6302962577</p>
-
-    <a class="btn" href="https://www.instagram.com/harshadentalclinic">Instagram</a>
-    <a class="btn" href="https://www.youtube.com/@harshadentalclinickakinada">YouTube</a>
 </div>
-
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/916302962577">💬</a>
-
-<!-- SLIDER SCRIPT -->
-<script>
-let images = [
-"images/clinic1.jpg",
-"images/clinic2.jpg",
-"images/clinic3.jpg",
-"images/clinic4.jpg",
-"images/reception.jpg"
-];
-
-let i = 0;
-
-setInterval(function(){
-    document.getElementById("slide").src = images[i];
-    i++;
-    if(i >= images.length){ i = 0; }
-}, 2000);
-</script>
 
 </body>
 </html>
