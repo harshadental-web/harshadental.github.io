@@ -4,89 +4,109 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Harsha Multi-Speciality Dental Clinic | Best Dentist in Kakinada</title>
+<title>Harsha Multi-Speciality Dental Clinic</title>
 
-<meta name="description" content="Best Dental Clinic in Kakinada. Root Canal, Implants, Whitening, Emergency Care.">
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-<!-- ICON LIBRARY -->
+<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-/* BACKGROUND */
 body {
 margin:0;
-font-family:'Segoe UI';
-color:white;
-background:linear-gradient(-45deg,#0f2027,#2c5364,#00c6ff,#0072ff);
-background-size:400% 400%;
-animation:bg 12s infinite;
-}
-@keyframes bg {
-0%{background-position:0%}
-50%{background-position:100%}
-100%{background-position:0%}
+font-family:'Poppins',sans-serif;
+background:#f5f7fb;
+color:#333;
 }
 
 /* NAVBAR */
 nav {
 display:flex;
 justify-content:space-between;
-padding:15px;
-background:rgba(0,0,0,0.6);
+padding:15px 30px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 position:sticky;
 top:0;
+z-index:1000;
 }
+
 nav a {
-color:white;
-margin:10px;
+margin:0 10px;
 text-decoration:none;
+color:#0072ff;
+font-weight:500;
 }
 
 /* HERO */
 .hero {
 text-align:center;
-padding:70px 20px;
+padding:80px 20px;
+background:linear-gradient(135deg,#0072ff,#00c6ff);
+color:white;
 }
-.hero h1 {font-size:36px;}
+
+.hero h1 {
+font-family:'Playfair Display',serif;
+font-size:40px;
+margin:0;
+}
+
+.hero p {
+margin-top:10px;
+font-size:18px;
+}
 
 .btn {
-padding:12px 20px;
+padding:12px 25px;
 margin:10px;
-background:#00c6ff;
 border:none;
-border-radius:6px;
+border-radius:25px;
 cursor:pointer;
+font-weight:bold;
 }
+
+.call {background:#00c853;color:white;}
+.whatsapp {background:#25D366;color:white;}
 
 /* SECTION */
 section {
-padding:30px;
+padding:40px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+/* CARD */
+.card {
+background:white;
+padding:25px;
+margin:20px 0;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 /* GRID */
 .grid {
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
+gap:20px;
 }
 
-/* CARD */
-.card {
-background:rgba(255,255,255,0.1);
-padding:20px;
+/* SERVICES */
+.service {
+padding:15px;
+border-left:4px solid #0072ff;
 border-radius:10px;
-cursor:pointer;
+background:#f9fbff;
 transition:0.3s;
-}
-.card:hover {
-transform:scale(1.05);
+cursor:pointer;
 }
 
-/* ICON */
-.card i {
-color:#00c6ff;
-margin-right:10px;
+.service:hover {
+transform:translateY(-5px);
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* POPUP */
@@ -97,55 +117,54 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.8);
+background:rgba(0,0,0,0.7);
 z-index:999;
 }
+
 .popup-content {
 background:white;
-color:black;
 margin:10% auto;
 padding:20px;
 width:80%;
 border-radius:10px;
 text-align:center;
 }
-.close {
-float:right;
-cursor:pointer;
-font-size:22px;
-}
 
-/* IMAGE */
 .popup img {
 width:100%;
 border-radius:10px;
 margin-top:10px;
 }
 
-/* FLOAT BUTTONS */
-.call {
-position:fixed;
-bottom:80px;
-right:20px;
-background:green;
-padding:15px;
-border-radius:50%;
-color:white;
+.close {
+float:right;
+font-size:22px;
+cursor:pointer;
 }
-.whatsapp {
+
+/* FLOAT */
+.call-btn, .wa-btn {
 position:fixed;
 bottom:20px;
-right:20px;
-background:#25D366;
-padding:15px;
+width:55px;
+height:55px;
 border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
 color:white;
 }
 
+.call-btn {left:20px;background:#0072ff;}
+.wa-btn {right:20px;background:#25D366;}
+
 footer {
-background:black;
-padding:20px;
 text-align:center;
+padding:20px;
+background:#0072ff;
+color:white;
+margin-top:20px;
 }
 
 </style>
@@ -153,7 +172,6 @@ text-align:center;
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
 <b>🦷 Harsha Dental</b>
 <div>
@@ -163,64 +181,55 @@ text-align:center;
 </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero" id="home">
 <h1>Harsha Multi-Speciality Dental Clinic</h1>
-<p>Advanced & Painless Dental Care in Kakinada</p>
+<p>Advanced, Painless & Trusted Dental Care in Kakinada</p>
 
-<a href="tel:6302962577"><button class="btn">📞 Call</button></a>
-<a href="https://wa.me/916302962577"><button class="btn">💬 WhatsApp</button></a>
+<a href="tel:6302962577"><button class="btn call">📞 Call</button></a>
+<a href="https://wa.me/916302962577"><button class="btn whatsapp">💬 WhatsApp</button></a>
 </div>
 
-<!-- SERVICES -->
-<section id="services">
-<h2>Our Treatments</h2>
+<section>
+
+<div class="card">
+<h2>👨‍⚕ Doctors</h2>
+<p><b>Dr. V.S.K. Sri Harsha</b> – Reg: A21717</p>
+<p><b>Dr. V. Sowmya</b> – Reg: A24986</p>
+</div>
+
+<div class="card">
+<h2>⏰ Timings</h2>
+<p>Mon–Sat: 9:30 AM – 9:00 PM</p>
+<p>Sunday: 9:30 AM – 1:00 PM</p>
+</div>
+
+<div class="card" id="services">
+<h2>🦷 Treatments</h2>
 
 <div class="grid">
 
-<div class="card" onclick="openPopup('root')">
-<h3><i class="fa-solid fa-tooth"></i> Root Canal</h3>
+<div class="service" onclick="openPopup('root')">
+<i class="fa-solid fa-tooth"></i> Root Canal
 </div>
 
-<div class="card" onclick="openPopup('whitening')">
-<h3><i class="fa-solid fa-star"></i> Whitening</h3>
+<div class="service" onclick="openPopup('white')">
+<i class="fa-solid fa-star"></i> Whitening
 </div>
 
-<div class="card" onclick="openPopup('implant')">
-<h3><i class="fa-solid fa-screwdriver-wrench"></i> Implants</h3>
+<div class="service" onclick="openPopup('implant')">
+<i class="fa-solid fa-screwdriver-wrench"></i> Implants
 </div>
 
-<div class="card" onclick="openPopup('smile')">
-<h3><i class="fa-solid fa-face-smile"></i> Smile Design</h3>
+<div class="service" onclick="openPopup('smile')">
+<i class="fa-solid fa-face-smile"></i> Smile Design
 </div>
 
 </div>
-</section>
 
-<!-- DOCTORS -->
-<section>
-<h2>Doctors</h2>
-<p>Dr. V.S.K. Sri Harsha – Reg: A21717</p>
-<p>Dr. V. Sowmya – Reg: A24986</p>
-</section>
-
-<!-- TIMINGS -->
-<section>
-<h2>Timings</h2>
-<p>Mon–Sat: 9:30 AM – 9:00 PM</p>
-<p>Sunday: 9:30 AM – 1:00 PM</p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-<h2>Contact</h2>
-
-<iframe src="https://maps.google.com/maps?q=Kakinada&t=&z=13&output=embed"
-width="100%" height="250"></iframe>
+</div>
 
 </section>
 
-<!-- POPUP -->
 <div id="popup" class="popup">
 <div class="popup-content">
 <span class="close" onclick="closePopup()">✖</span>
@@ -230,34 +239,40 @@ width="100%" height="250"></iframe>
 </div>
 </div>
 
-<!-- FLOAT BUTTONS -->
-<a href="tel:6302962577" class="call">📞</a>
-<a href="https://wa.me/916302962577" class="whatsapp">💬</a>
+<section id="contact" class="card">
+<h2>📍 Location</h2>
+<iframe src="https://maps.google.com/maps?q=Kakinada&t=&z=13&output=embed" width="100%" height="250"></iframe>
+</section>
 
-<footer>© Harsha Dental Clinic</footer>
+<footer>
+© Harsha Dental Clinic
+</footer>
+
+<a href="tel:6302962577" class="call-btn">📞</a>
+<a href="https://wa.me/916302962577" class="wa-btn">💬</a>
 
 <script>
 function openPopup(type){
 let t="",d="",i="";
 
 if(type=="root"){
-t="Root Canal";
-d="Painless treatment to save teeth.";
+t="Root Canal Treatment";
+d="Painless procedure to save infected tooth.";
 i="clinic1.jpg.jpeg";
 }
-if(type=="whitening"){
-t="Whitening";
-d="Bright smile treatment.";
+if(type=="white"){
+t="Teeth Whitening";
+d="Professional whitening for bright smile.";
 i="clinic2.jpg.jpeg";
 }
 if(type=="implant"){
-t="Implants";
-d="Permanent teeth replacement.";
+t="Dental Implants";
+d="Permanent replacement for missing teeth.";
 i="clinic3.jpg.jpeg";
 }
 if(type=="smile"){
-t="Smile Design";
-d="Cosmetic smile makeover.";
+t="Smile Designing";
+d="Complete cosmetic smile makeover.";
 i="clinic4.jpg.jpeg";
 }
 
