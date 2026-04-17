@@ -4,64 +4,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Harsha Multi-Speciality Dental Clinic</title>
+<title>Harsha Dental Clinic</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-/* COLORS (Professional Medical) */
-:root{
---primary:#0ea5a4;
---secondary:#2563eb;
---light:#f8fafc;
---text:#1e293b;
-}
-
 body{
 margin:0;
-font-family:'Poppins',sans-serif;
-background:var(--light);
-color:var(--text);
+font-family:'Outfit',sans-serif;
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#0ea5a4);
+color:white;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
 display:flex;
 justify-content:space-between;
-padding:15px 40px;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+padding:20px 40px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
 position:sticky;
 top:0;
-z-index:1000;
-}
-
-nav a{
-margin:0 15px;
-text-decoration:none;
-color:var(--text);
 }
 
 /* HERO */
 .hero{
-background:linear-gradient(135deg,var(--primary),var(--secondary));
-color:white;
 text-align:center;
-padding:80px 20px;
+padding:100px 20px;
 }
 
 .hero h1{
-font-size:40px;
+font-size:55px;
 }
 
+.hero p{
+opacity:0.8;
+}
+
+/* BUTTON */
 .btn{
-padding:12px 25px;
+padding:14px 30px;
+border-radius:30px;
 border:none;
-border-radius:25px;
 background:white;
-color:var(--primary);
+color:#0ea5a4;
 cursor:pointer;
 margin-top:20px;
 }
@@ -71,6 +59,15 @@ section{
 padding:60px 10%;
 }
 
+/* GLASS CARD */
+.card{
+background:rgba(255,255,255,0.1);
+padding:25px;
+border-radius:20px;
+backdrop-filter:blur(20px);
+margin:20px 0;
+}
+
 /* GRID */
 .grid{
 display:grid;
@@ -78,54 +75,54 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-/* CARD */
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* SERVICES */
+/* SERVICE */
 .service{
 text-align:center;
 padding:20px;
-border-radius:10px;
-background:white;
-transition:0.3s;
+border-radius:15px;
+background:rgba(255,255,255,0.1);
 cursor:pointer;
+transition:0.4s;
 }
 
 .service:hover{
-transform:translateY(-8px);
+transform:translateY(-10px) scale(1.05);
 }
 
 .service i{
-color:var(--primary);
-font-size:25px;
-margin-bottom:10px;
-}
-
-/* STATS */
-.stat{
-text-align:center;
+font-size:30px;
+color:#00f2fe;
 }
 
 /* GALLERY */
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+display:flex;
 gap:15px;
+overflow:auto;
 }
 
 .gallery img{
-width:100%;
-border-radius:10px;
+height:200px;
+border-radius:15px;
 }
 
-/* VIDEO */
-.video iframe{
-border-radius:10px;
+/* POPUP */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+padding:40px;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:20px;
+cursor:pointer;
 }
 
 /* SOCIAL */
@@ -138,48 +135,12 @@ gap:20px;
 .social a{
 padding:15px;
 border-radius:10px;
-color:white;
 text-decoration:none;
+color:white;
 }
 
 .insta{background:#e1306c;}
 .youtube{background:red;}
-
-/* POPUP */
-.popup{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-}
-
-.popup-content{
-background:white;
-padding:30px;
-margin:10% auto;
-width:80%;
-border-radius:10px;
-}
-
-.close{
-float:right;
-cursor:pointer;
-}
-
-/* ANIMATION */
-.fade{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
 
 </style>
 </head>
@@ -187,40 +148,30 @@ transform:translateY(0);
 <body>
 
 <nav>
-<b>Harsha Dental</b>
-<div>
-<a href="#services">Treatments</a>
-<a href="#contact">Contact</a>
-</div>
+<b>🦷 Harsha Dental</b>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-<h1>Advanced Dental Care in Kakinada</h1>
-<p>Painless Treatments | Modern Equipment | Trusted Care</p>
+<h1>Redefining Dental Care</h1>
+<p>Modern • Painless • Advanced Treatments in Kakinada</p>
+
 <a href="tel:6302962577">
 <button class="btn">Book Appointment</button>
 </a>
 </div>
 
-<!-- STATS -->
-<section class="fade">
-<div class="grid">
-<div class="stat"><h2>5000+</h2><p>Patients</p></div>
-<div class="stat"><h2>10+</h2><p>Treatments</p></div>
-<div class="stat"><h2>100%</h2><p>Satisfaction</p></div>
+<!-- ABOUT -->
+<section>
+<div class="card">
+<h2>About Clinic</h2>
+<p>Advanced dental treatments with precision, comfort and modern technology.</p>
 </div>
 </section>
 
-<!-- ABOUT -->
-<section class="fade">
-<h2>About Us</h2>
-<p>We provide advanced dental care using modern technology with a focus on comfort and precision.</p>
-</section>
-
 <!-- SERVICES -->
-<section id="services" class="fade">
-<h2>Our Treatments</h2>
+<section>
+<h2 style="text-align:center;">Treatments</h2>
 
 <div class="grid">
 
@@ -243,46 +194,33 @@ transform:translateY(0);
 </section>
 
 <!-- GALLERY -->
-<section class="fade">
-<h2>Gallery</h2>
+<section>
+<h2>Clinic</h2>
+
 <div class="gallery">
 <img src="clinic1.jpg.jpeg">
 <img src="clinic2.jpg.jpeg">
 <img src="clinic3.jpg.jpeg">
 </div>
-</section>
 
-<!-- VIDEO -->
-<section class="fade">
-<h2>Clinic Video</h2>
-<div class="video">
-<iframe width="100%" height="300" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-</div>
 </section>
 
 <!-- SOCIAL -->
-<section class="fade">
-<h2>Follow Us</h2>
+<section>
+<h2 style="text-align:center;">Connect</h2>
+
 <div class="social">
 <a href="#" class="insta">Instagram</a>
 <a href="#" class="youtube">YouTube</a>
 </div>
-</section>
 
-<!-- CONTACT -->
-<section id="contact" class="fade">
-<h2>Location</h2>
-<iframe src="https://maps.google.com/maps?q=Kakinada&t=&z=13&output=embed"
-width="100%" height="300"></iframe>
 </section>
 
 <!-- POPUP -->
 <div id="popup" class="popup">
-<div class="popup-content">
 <span class="close" onclick="closePopup()">✖</span>
 <h2 id="title"></h2>
 <p id="desc"></p>
-</div>
 </div>
 
 <script>
@@ -300,15 +238,6 @@ document.getElementById("popup").style.display="block";
 function closePopup(){
 document.getElementById("popup").style.display="none";
 }
-
-const items=document.querySelectorAll('.fade');
-window.addEventListener('scroll',()=>{
-items.forEach(el=>{
-if(el.getBoundingClientRect().top<window.innerHeight-100){
-el.classList.add('show');
-}
-});
-});
 
 </script>
 
