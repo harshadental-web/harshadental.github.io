@@ -4,48 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Harsha Multi-Speciality Dental Clinic | Best Dentist in Kakinada</title>
-
-<meta name="description" content="Harsha Multi-Speciality Dental Clinic in Kakinada. Expert dentists, painless root canal, implants, smile designing.">
+<title>Harsha Multi-Speciality Dental Clinic</title>
 
 <style>
 
-/* BACKGROUND */
-body {
+/* BODY */
+body{
 margin:0;
-font-family:'Segoe UI',sans-serif;
+font-family:Arial, sans-serif;
 background:linear-gradient(270deg,#0f2027,#2c5364,#00c6ff,#0072ff);
 background-size:600% 600%;
-animation:bg 12s ease infinite;
+animation:bg 10s ease infinite;
 }
 
-@keyframes bg {
+@keyframes bg{
 0%{background-position:0% 50%}
 50%{background-position:100% 50%}
 100%{background-position:0% 50%}
 }
 
 /* NAVBAR */
-.navbar {
+.navbar{
 position:sticky;
 top:0;
 background:white;
-padding:10px 20px;
+padding:10px;
 display:flex;
 justify-content:space-between;
 box-shadow:0 2px 10px rgba(0,0,0,0.1);
-z-index:1000;
 }
 
-.navbar a {
-margin:0 10px;
+.navbar a{
 text-decoration:none;
+margin:0 10px;
 color:#0072ff;
 font-weight:bold;
 }
 
 /* CARD */
-.card {
+.card{
 background:white;
 margin:20px;
 padding:20px;
@@ -56,63 +53,56 @@ transform:translateY(40px);
 transition:0.6s;
 }
 
-.card.show {
+.card.show{
 opacity:1;
 transform:translateY(0);
 }
 
-/* SERVICES */
-.service-box {
-background:#f9fbff;
-padding:15px;
-border-radius:10px;
-margin:10px 0;
-cursor:pointer;
-transition:0.3s;
+/* SERVICE */
+.service{
 border-left:5px solid #0072ff;
-}
-
-.service-box:hover {
-transform:translateY(-5px);
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* FORM */
-form {
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-input {
-padding:12px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-button {
-padding:12px;
-background:#0072ff;
-color:white;
-border:none;
+padding:10px;
+margin:10px 0;
+background:#f9fbff;
 border-radius:8px;
 cursor:pointer;
 }
 
 /* GALLERY */
-.gallery {
+.gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
 gap:10px;
 }
 
-.gallery img {
+.gallery img{
 width:100%;
 border-radius:10px;
 }
 
+/* FORM */
+form{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input{
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+padding:12px;
+background:#0072ff;
+color:white;
+border:none;
+border-radius:8px;
+}
+
 /* POPUP */
-.popup {
+.popup{
 display:none;
 position:fixed;
 top:0;
@@ -122,43 +112,40 @@ height:100%;
 background:rgba(0,0,0,0.8);
 }
 
-.popup-content {
+.popup-content{
 background:white;
 padding:20px;
-margin:15% auto;
+margin:20% auto;
 width:80%;
 border-radius:10px;
 }
 
-.close {
+.close{
 float:right;
 cursor:pointer;
 }
 
-/* FLOAT BUTTONS */
-.call-btn,.wa-btn {
+/* FLOAT BUTTON */
+.call{
 position:fixed;
 bottom:20px;
-width:50px;
-height:50px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:24px;
+left:20px;
+background:#0072ff;
 color:white;
+padding:15px;
+border-radius:50%;
 text-decoration:none;
 }
 
-.call-btn {left:20px;background:#0072ff;}
-.wa-btn {right:20px;background:#25D366;}
-
-/* FOOTER */
-footer {
-text-align:center;
-padding:20px;
-background:#0072ff;
+.wa{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
 color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
 }
 
 </style>
@@ -168,7 +155,7 @@ color:white;
 
 <!-- NAVBAR -->
 <div class="navbar">
-<h3>🦷 Harsha Dental</h3>
+<b>🦷 Harsha Dental</b>
 <div>
 <a href="#">Home</a>
 <a href="#">Services</a>
@@ -187,87 +174,54 @@ color:white;
 
 <!-- DOCTORS -->
 <div class="card">
-<h2>👨‍⚕ Doctors</h2>
+<h2>Doctors</h2>
 
-<p><b>Dr. V.S.K. Sri Harsha</b><br>
-B.D.S (RIMS), M.D.S (Endo)<br>
-Regd No: A21717</p>
-
-<p><b>Dr. V. Sowmya</b><br>
-B.D.S<br>
-Regd No: A24986</p>
+<p><b>Dr. V.S.K. Sri Harsha</b><br>Reg No: A21717</p>
+<p><b>Dr. V. Sowmya</b><br>Reg No: A24986</p>
 
 </div>
 
 <!-- TIMINGS -->
 <div class="card">
-<h2>⏰ Timings</h2>
-<p>Monday - Saturday: 9:30 AM – 9:00 PM</p>
+<h2>Timings</h2>
+<p>Mon-Sat: 9:30 AM – 9:00 PM</p>
 <p>Sunday: 9:30 AM – 1:00 PM</p>
 </div>
 
 <!-- SERVICES -->
 <div class="card">
-<h2>🦷 Our Treatments</h2>
+<h2>Our Treatments</h2>
 
-<div class="service-box" onclick="openPopup('root')">
-<h3>Root Canal Treatment</h3>
-<p>Painless treatment to save your natural tooth.</p>
-</div>
-
-<div class="service-box" onclick="openPopup('implant')">
-<h3>Dental Implants</h3>
-<p>Permanent solution for missing teeth.</p>
-</div>
-
-<div class="service-box" onclick="openPopup('whitening')">
-<h3>Teeth Whitening</h3>
-<p>Professional smile brightening.</p>
-</div>
-
-<div class="service-box" onclick="openPopup('smile')">
-<h3>Smile Designing</h3>
-<p>Complete cosmetic smile makeover.</p>
-</div>
-
-<div class="service-box" onclick="openPopup('clean')">
-<h3>Teeth Cleaning</h3>
-<p>Maintain oral hygiene and healthy gums.</p>
-</div>
-
-<div class="service-box" onclick="openPopup('surgery')">
-<h3>Oral Surgery</h3>
-<p>Advanced dental procedures with care.</p>
-</div>
+<div class="service" onclick="openPopup('root')">Root Canal</div>
+<div class="service" onclick="openPopup('implant')">Dental Implants</div>
+<div class="service" onclick="openPopup('white')">Whitening</div>
+<div class="service" onclick="openPopup('clean')">Cleaning</div>
 
 </div>
 
 <!-- GALLERY -->
 <div class="card">
-<h2>📸 Clinic Gallery</h2>
+<h2>Gallery</h2>
 
 <div class="gallery">
 <img src="clinic1.jpg.jpeg">
 <img src="clinic2.jpg.jpeg">
 <img src="clinic3.jpg.jpeg">
-<img src="clinic4.jpg.jpeg">
-<img src="doctor.jpg.jpeg">
-<img src="reception.jpg.jpeg">
 </div>
 
 </div>
 
 <!-- BOOKING -->
 <div class="card">
-<h2>📅 Book Appointment</h2>
+<h2>Book Appointment</h2>
 
 <form onsubmit="sendWhatsApp(); return false;">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="tel" id="phone" placeholder="Mobile Number" required>
-<input type="text" id="problem" placeholder="Problem" required>
-
-<button type="submit">Book via WhatsApp</button>
+<input id="name" placeholder="Name" required>
+<input id="phone" placeholder="Phone" required>
+<input id="problem" placeholder="Problem" required>
+<button>Book via WhatsApp</button>
 </form>
+
 </div>
 
 <!-- POPUP -->
@@ -279,28 +233,19 @@ Regd No: A24986</p>
 </div>
 </div>
 
-<!-- FOOTER -->
-<footer>
-<p>© 2026 Harsha Dental Clinic</p>
-<p>Kakinada | 📞 6302962577</p>
-</footer>
-
-<!-- FLOAT BUTTONS -->
-<a href="tel:6302962577" class="call-btn">📞</a>
-<a href="https://wa.me/916302962577" class="wa-btn">💬</a>
+<!-- FLOAT -->
+<a href="tel:6302962577" class="call">📞</a>
+<a href="https://wa.me/916302962577" class="wa">💬</a>
 
 <script>
 
-/* POPUP */
 function openPopup(type){
 let t="",d="";
 
-if(type=="root"){t="Root Canal";d="Removes infection and saves tooth.";}
-if(type=="implant"){t="Implants";d="Permanent natural replacement.";}
-if(type=="whitening"){t="Whitening";d="Bright smile treatment.";}
-if(type=="smile"){t="Smile Designing";d="Enhances smile.";}
-if(type=="clean"){t="Cleaning";d="Removes plaque.";}
-if(type=="surgery"){t="Oral Surgery";d="Advanced procedures.";}
+if(type=="root"){t="Root Canal";d="Painless treatment";}
+if(type=="implant"){t="Implants";d="Permanent solution";}
+if(type=="white"){t="Whitening";d="Bright smile";}
+if(type=="clean"){t="Cleaning";d="Healthy gums";}
 
 document.getElementById("title").innerText=t;
 document.getElementById("desc").innerText=d;
@@ -311,22 +256,16 @@ function closePopup(){
 document.getElementById("popup").style.display="none";
 }
 
-/* WHATSAPP */
 function sendWhatsApp(){
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let problem=document.getElementById("problem").value;
-
-let msg=`Appointment:%0AName:${name}%0APhone:${phone}%0AProblem:${problem}`;
+let n=name.value,p=phone.value,pr=problem.value;
+let msg=`Name:${n}%0APhone:${p}%0AProblem:${pr}`;
 window.open(`https://wa.me/916302962577?text=${msg}`);
 }
 
-/* ANIMATION */
 let cards=document.querySelectorAll(".card");
 window.addEventListener("scroll",()=>{
 cards.forEach(c=>{
-let pos=c.getBoundingClientRect().top;
-if(pos<window.innerHeight-100){
+if(c.getBoundingClientRect().top<window.innerHeight-100){
 c.classList.add("show");
 }
 });
