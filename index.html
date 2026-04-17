@@ -3,185 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harsha Multi-Speciality Dental Clinic</title>
+
+<title>Harsha Multi-Speciality Dental Clinic | Best Dentist in Kakinada</title>
+
+<meta name="description" content="Harsha Multi-Speciality Dental Clinic in Kakinada. Expert dentists, painless root canal, implants, smile designing.">
+<meta name="keywords" content="Dental Clinic Kakinada, Dentist Kakinada, Root Canal, Teeth Cleaning">
 
 <style>
+
 body {
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    color:white;
-    background: linear-gradient(270deg,#0f2027,#2c5364,#00c6ff,#0072ff);
-    background-size: 600% 600%;
-    animation: bg 12s ease infinite;
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(270deg,#0f2027,#2c5364,#00c6ff,#0072ff);
+background-size:600% 600%;
+animation:bg 12s ease infinite;
 }
+
 @keyframes bg {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
 }
 
-header {
-    text-align:center;
-    padding:50px 20px;
-}
-header h1 {
-    font-size:36px;
-}
-header p {
-    opacity:0.9;
+/* NAVBAR */
+.navbar {
+position: sticky;
+top:0;
+background:white;
+padding:10px 20px;
+display:flex;
+justify-content:space-between;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+z-index:1000;
 }
 
-.btn {
-    display:inline-block;
-    margin:10px;
-    padding:12px 25px;
-    border-radius:30px;
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
+.navbar a {
+margin:0 10px;
+text-decoration:none;
+color:#0072ff;
+font-weight:bold;
 }
-.call {background:#00c853;}
-.map {background:#2962ff;}
-.whatsapp {background:#25D366;}
 
+/* CARD */
 .card {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    border-radius:20px;
-    padding:20px;
-    margin:20px;
-    text-align:center;
+background:white;
+margin:20px;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
 }
 
+.card.show {
+opacity:1;
+transform:translateY(0);
+}
+
+/* SERVICES */
+.service {
+border-left:5px solid #0072ff;
+padding:10px;
+margin:10px 0;
+background:#f9fbff;
+border-radius:8px;
+}
+
+.service h3 {
+margin:0;
+color:#0072ff;
+}
+
+.service p {
+margin:5px 0;
+}
+
+/* FORM */
+form {
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input {
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button {
+padding:12px;
+background:#0072ff;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* GALLERY */
 .gallery {
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap:10px;
-    padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:10px;
 }
+
 .gallery img {
-    width:100%;
-    border-radius:15px;
-    transition:0.4s;
-}
-.gallery img:hover {
-    transform: scale(1.05);
+width:100%;
+border-radius:10px;
 }
 
-.status {
-    font-size:18px;
-    margin-top:10px;
+/* FLOAT BUTTONS */
+.call-btn,.wa-btn {
+position:fixed;
+bottom:20px;
+width:50px;
+height:50px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+color:white;
+text-decoration:none;
 }
 
-.float {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    padding:15px;
-    border-radius:50%;
-    font-size:20px;
-    text-decoration:none;
-    color:white;
+.call-btn {left:20px;background:#0072ff;}
+.wa-btn {right:20px;background:#25D366;}
+
+/* FOOTER */
+footer {
+text-align:center;
+padding:20px;
+background:#0072ff;
+color:white;
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>🦷 Harsha Multi-Speciality Dental Clinic</h1>
-    <p>Redefining Painless Dentistry | Aesthetic Excellence</p>
+<!-- NAVBAR -->
+<div class="navbar">
+<h3>🦷 Harsha Dental</h3>
+<div>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Contact</a>
+</div>
+</div>
 
-    <a href="tel:6302962577" class="btn call">📞 Call</a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Harsha+Multi-Speciality+Dental+Clinic,+Kakinada" target="_blank" class="btn map">📍 Location</a>
-    <a href="https://wa.me/916302962577" target="_blank" class="btn whatsapp">💬 WhatsApp</a>
+<!-- HERO -->
+<div class="card">
+<h1>Harsha Multi-Speciality Dental Clinic</h1>
+<p>Healthy Smile Starts Here 😁</p>
 
-    <div id="status" class="status"></div>
-</header>
+<a href="tel:6302962577">📞 Call Now</a><br><br>
+<a href="https://maps.google.com/?q=Harsha+Multi+Speciality+Dental+Clinic+Kakinada">📍 View Location</a>
+</div>
 
 <!-- DOCTORS -->
 <div class="card">
-    <h2>👨‍⚕️ Our Doctors</h2>
+<h2>👨‍⚕ Doctors</h2>
 
-    <h3>Dr. V.S.K. Sri Harsha</h3>
-    <p>B.D.S (RIMS), M.D.S (Endo)</p>
-    <p>Root Canal Specialist</p>
-    <p><b>Regd No: A21717</b></p>
+<p><b>Dr. V.S.K. Sri Harsha</b><br>
+B.D.S (RIMS), M.D.S (Endo)<br>
+Regd No: A21717</p>
 
-    <hr>
+<p><b>Dr. V. Sowmya</b><br>
+B.D.S<br>
+Regd No: A24986</p>
 
-    <h3>Dr. V. Sowmya</h3>
-    <p>B.D.S</p>
-    <p>Cosmetic Dental Surgeon</p>
-    <p><b>Regd No: A24986</b></p>
 </div>
 
 <!-- TIMINGS -->
 <div class="card">
-    <h2>⏰ Clinic Timings</h2>
+<h2>⏰ Timings</h2>
+<p>Monday - Saturday: 9:30 AM – 9:00 PM</p>
+<p>Sunday: 9:30 AM – 1:00 PM</p>
+</div>
 
-    <p><b>Monday – Saturday:</b></p>
-    <p>9:30 AM – 9:00 PM</p>
+<!-- SERVICES -->
+<div class="card">
+<h2>🦷 Our Services</h2>
 
-    <p><b>Sunday:</b></p>
-    <p>9:30 AM – 1:00 PM</p>
+<div class="service"><h3>Teeth Whitening</h3><p>Brighten your smile professionally.</p></div>
+<div class="service"><h3>Dental Implants</h3><p>Permanent tooth replacement.</p></div>
+<div class="service"><h3>Smile Designing</h3><p>Perfect your smile.</p></div>
+<div class="service"><h3>Root Canal</h3><p>Painless treatment.</p></div>
+<div class="service"><h3>Teeth Cleaning</h3><p>Healthy gums.</p></div>
+<div class="service"><h3>Oral Surgery</h3><p>Advanced procedures.</p></div>
+
+</div>
+
+<!-- BOOKING -->
+<div class="card">
+<h2>📅 Book Appointment</h2>
+
+<form onsubmit="sendWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Mobile Number" required>
+<input type="text" id="problem" placeholder="Problem" required>
+
+<button type="submit">Book via WhatsApp</button>
+</form>
 </div>
 
 <!-- GALLERY -->
-<h2 style="text-align:center;">🏥 Clinic Gallery</h2>
+<div class="card">
+<h2>📸 Clinic Gallery</h2>
 
 <div class="gallery">
-    <img src="clinic1.jpg.jpeg">
-    <img src="clinic2.jpg.jpeg">
-    <img src="clinic3.jpg.jpeg">
-    <img src="clinic4.jpg.jpeg">
-    <img src="doctor.jpg.jpeg">
-    <img src="reception.jpg.jpeg">
+<img src="clinic1.jpg.jpeg">
+<img src="clinic2.jpg.jpeg">
+<img src="clinic3.jpg.jpeg">
+<img src="clinic4.jpg.jpeg">
+<img src="doctor.jpg.jpeg">
+<img src="reception.jpg.jpeg">
 </div>
 
-<!-- MAP -->
+</div>
+
+<!-- REVIEWS -->
 <div class="card">
-    <h2>📍 Our Location</h2>
-    <iframe 
-    src="https://www.google.com/maps?q=Harsha+Multi-Speciality+Dental+Clinic,+Kakinada&output=embed"
-    width="100%" height="300" style="border:0;border-radius:15px;">
-    </iframe>
+<h2>⭐ Reviews</h2>
+<p>⭐⭐⭐⭐⭐ Best dental clinic!</p>
+<p>⭐⭐⭐⭐⭐ Friendly doctors!</p>
 </div>
 
 <!-- FOOTER -->
-<div style="text-align:center;padding:20px;">
-    <p>© 2026 Harsha Dental Clinic</p>
-</div>
+<footer>
+<p>© 2026 Harsha Dental Clinic</p>
+<p>Kakinada | 📞 6302962577</p>
+</footer>
 
-<!-- FLOAT WHATSAPP -->
-<a href="https://wa.me/916302962577" class="float">💬</a>
+<!-- FLOAT BUTTONS -->
+<a href="tel:6302962577" class="call-btn">📞</a>
+<a href="https://wa.me/916302962577" class="wa-btn">💬</a>
 
+<!-- SCRIPT -->
 <script>
-// LIVE OPEN/CLOSED STATUS
-function checkStatus() {
-    const now = new Date();
-    const day = now.getDay();
-    const hour = now.getHours();
-    const min = now.getMinutes();
-    const time = hour + min/60;
+function sendWhatsApp(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let problem=document.getElementById("problem").value;
 
-    let open = false;
+let msg=`Appointment:%0AName:${name}%0APhone:${phone}%0AProblem:${problem}`;
 
-    if(day >= 1 && day <= 6){ // Mon-Sat
-        if(time >= 9.5 && time <= 21){
-            open = true;
-        }
-    } else if(day === 0){ // Sunday
-        if(time >= 9.5 && time <= 13){
-            open = true;
-        }
-    }
-
-    document.getElementById("status").innerHTML =
-        open ? "🟢 OPEN NOW" : "🔴 CLOSED NOW";
+window.open(`https://wa.me/916302962577?text=${msg}`);
 }
-checkStatus();
+
+// animation
+let cards=document.querySelectorAll(".card");
+window.addEventListener("scroll",()=>{
+cards.forEach(c=>{
+let pos=c.getBoundingClientRect().top;
+if(pos<window.innerHeight-100){
+c.classList.add("show");
+}
+});
+});
 </script>
 
 </body>
