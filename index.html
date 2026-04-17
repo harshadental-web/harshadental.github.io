@@ -21,7 +21,7 @@ background:#f4f8fb;
 color:#1e293b;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
 display:flex;
 justify-content:space-between;
@@ -46,17 +46,11 @@ align-items:center;
 padding:80px 10%;
 }
 
-.hero-text{
-max-width:500px;
-}
+.hero-text{max-width:500px;}
 
-.hero h1{
-font-size:42px;
-}
+.hero h1{font-size:42px;}
 
-.hero p{
-color:#64748b;
-}
+.hero p{color:#64748b;}
 
 .hero img{
 width:380px;
@@ -71,17 +65,10 @@ padding:12px 25px;
 border:none;
 border-radius:25px;
 cursor:pointer;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#1d4ed8;
 }
 
 /* SECTION */
-section{
-padding:70px 10%;
-}
+section{padding:70px 10%;}
 
 /* GRID */
 .grid{
@@ -96,7 +83,7 @@ background:white;
 padding:20px;
 border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,0.05);
-transition:0.4s;
+transition:0.3s;
 }
 
 .card:hover{
@@ -117,9 +104,7 @@ gap:20px;
 align-items:center;
 }
 
-.doctor img{
-border-radius:10px;
-}
+.doctor img{border-radius:10px;}
 
 /* GALLERY */
 .gallery{
@@ -160,15 +145,8 @@ color:white;
 font-size:22px;
 }
 
-.call{
-left:20px;
-background:#2563eb;
-}
-
-.whatsapp{
-right:20px;
-background:#25D366;
-}
+.call{left:20px;background:#2563eb;}
+.whatsapp{right:20px;background:#25D366;}
 
 /* POPUP */
 .popup{
@@ -184,9 +162,10 @@ background:rgba(0,0,0,0.8);
 .popup-content{
 background:white;
 padding:25px;
-margin:15% auto;
+margin:10% auto;
 width:80%;
 border-radius:10px;
+white-space:pre-line;
 }
 
 .close{
@@ -225,12 +204,10 @@ transform:translateY(0);
 <div class="hero-text">
 <h1>Advanced Dental Care in Kakinada</h1>
 <p>Painless treatments with modern technology</p>
-
 <a href="tel:6302962577">
 <button class="btn">Book Appointment</button>
 </a>
 </div>
-
 <img src="clinic1.jpg.jpeg">
 </div>
 
@@ -240,25 +217,17 @@ transform:translateY(0);
 
 <div class="grid">
 
-<div class="card service" onclick="openPopup('root')">
-<i class="fa-solid fa-tooth"></i>
-<h3>Root Canal</h3>
-</div>
-
-<div class="card service" onclick="openPopup('implant')">
-<i class="fa-solid fa-screwdriver-wrench"></i>
-<h3>Dental Implants</h3>
-</div>
-
-<div class="card service" onclick="openPopup('white')">
-<i class="fa-solid fa-star"></i>
-<h3>Whitening</h3>
-</div>
-
-<div class="card service" onclick="openPopup('clean')">
-<i class="fa-solid fa-brush"></i>
-<h3>Cleaning</h3>
-</div>
+<div class="card service" onclick="openPopup('root')"><i class="fa-solid fa-tooth"></i><h3>Root Canal</h3></div>
+<div class="card service" onclick="openPopup('implant')"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Dental Implants</h3></div>
+<div class="card service" onclick="openPopup('white')"><i class="fa-solid fa-star"></i><h3>Teeth Whitening</h3></div>
+<div class="card service" onclick="openPopup('clean')"><i class="fa-solid fa-brush"></i><h3>Teeth Cleaning</h3></div>
+<div class="card service" onclick="openPopup('reshape')"><i class="fa-solid fa-face-smile"></i><h3>Teeth Reshaping</h3></div>
+<div class="card service" onclick="openPopup('emergency')"><i class="fa-solid fa-truck-medical"></i><h3>Emergency Care</h3></div>
+<div class="card service" onclick="openPopup('online')"><i class="fa-solid fa-laptop-medical"></i><h3>Online Consultation</h3></div>
+<div class="card service" onclick="openPopup('dentures')"><i class="fa-solid fa-teeth"></i><h3>Dentures & Bridges</h3></div>
+<div class="card service" onclick="openPopup('laser')"><i class="fa-solid fa-bolt"></i><h3>Laser Dentistry</h3></div>
+<div class="card service" onclick="openPopup('xray')"><i class="fa-solid fa-x-ray"></i><h3>Dental X-Ray</h3></div>
+<div class="card service" onclick="openPopup('kids')"><i class="fa-solid fa-child"></i><h3>Pediatric Dentistry</h3></div>
 
 </div>
 </section>
@@ -309,13 +278,11 @@ transform:translateY(0);
 <input id="name" placeholder="Name" required>
 <input id="phone" placeholder="Phone" required>
 <textarea id="msg" placeholder="Problem"></textarea>
-
 <button class="btn">Book via WhatsApp</button>
 </form>
 
 <br><br>
 
-<!-- MAP -->
 <iframe src="https://maps.google.com/maps?q=Harsha%20Multi%20Speciality%20Dental%20Clinic%20Kakinada&t=&z=13&output=embed"
 width="100%" height="300"></iframe>
 
@@ -331,26 +298,73 @@ width="100%" height="300"></iframe>
 </div>
 
 <!-- FLOAT ICONS -->
-<a href="tel:6302962577" class="float call">
-<i class="fa-solid fa-phone"></i>
-</a>
-
-<a href="https://wa.me/916302962577" class="float whatsapp">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
+<a href="tel:6302962577" class="float call"><i class="fa-solid fa-phone"></i></a>
+<a href="https://wa.me/916302962577" class="float whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script>
 
 function openPopup(type){
+
 let t="",d="";
 
-if(type=="root"){t="Root Canal";d="Painless treatment";}
-if(type=="implant"){t="Implants";d="Permanent solution";}
-if(type=="white"){t="Whitening";d="Bright smile";}
-if(type=="clean"){t="Cleaning";d="Healthy gums";}
+if(type=="root"){
+t="Root Canal Treatment";
+d="Removes infection and saves tooth.\n✔ Painless\n✔ Quick recovery";
+}
+
+if(type=="implant"){
+t="Dental Implants";
+d="Permanent replacement for missing teeth.\n✔ Strong\n✔ Natural look";
+}
+
+if(type=="white"){
+t="Teeth Whitening";
+d="Professional whitening treatment.\n✔ Bright smile\n✔ Safe";
+}
+
+if(type=="clean"){
+t="Teeth Cleaning";
+d="Removes plaque and tartar.\n✔ Healthy gums\n✔ Fresh breath";
+}
+
+if(type=="reshape"){
+t="Teeth Reshaping";
+d="Improves teeth appearance.\n✔ Quick\n✔ Painless";
+}
+
+if(type=="emergency"){
+t="Emergency Care";
+d="Immediate dental treatment.\n✔ Quick relief\n✔ Same-day care";
+}
+
+if(type=="online"){
+t="Online Consultation";
+d="Consult from home.\n✔ Easy\n✔ Time-saving";
+}
+
+if(type=="dentures"){
+t="Dentures & Bridges";
+d="Replace missing teeth.\n✔ Natural look\n✔ Restore smile";
+}
+
+if(type=="laser"){
+t="Laser Dentistry";
+d="Advanced painless treatment.\n✔ Fast healing\n✔ Modern tech";
+}
+
+if(type=="xray"){
+t="Dental X-Ray";
+d="Accurate diagnosis.\n✔ Safe\n✔ Quick scan";
+}
+
+if(type=="kids"){
+t="Pediatric Dentistry";
+d="Dental care for children.\n✔ Gentle care\n✔ Preventive";
+}
 
 document.getElementById("title").innerText=t;
 document.getElementById("desc").innerText=d;
+
 document.getElementById("popup").style.display="block";
 }
 
