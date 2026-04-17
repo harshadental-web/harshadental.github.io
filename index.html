@@ -6,137 +6,108 @@
 
 <title>Harsha Multi-Speciality Dental Clinic | Best Dentist in Kakinada</title>
 
-<meta name="description" content="Harsha Multi-Speciality Dental Clinic in Kakinada. Expert dentists, painless root canal, implants, smile designing.">
-<meta name="keywords" content="Dental Clinic Kakinada, Dentist Kakinada, Root Canal, Teeth Cleaning">
+<meta name="description" content="Best Dental Clinic in Kakinada. Root Canal, Implants, Teeth Whitening, Emergency Care. Book appointment now.">
+<meta name="keywords" content="Dentist Kakinada, Root Canal Kakinada, Teeth Whitening, Dental Clinic Near Me">
 
 <style>
 
-body {
+body{
 margin:0;
-font-family: 'Segoe UI', sans-serif;
-background: linear-gradient(270deg,#0f2027,#2c5364,#00c6ff,#0072ff);
+font-family:Segoe UI;
+background:linear-gradient(270deg,#0f2027,#2c5364,#00c6ff);
 background-size:600% 600%;
-animation:bg 12s ease infinite;
+animation:bg 10s infinite;
+color:white;
 }
 
-@keyframes bg {
+@keyframes bg{
 0%{background-position:0% 50%}
 50%{background-position:100% 50%}
 100%{background-position:0% 50%}
 }
 
 /* NAVBAR */
-.navbar {
-position: sticky;
-top:0;
-background:white;
-padding:10px 20px;
+nav{
 display:flex;
 justify-content:space-between;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-z-index:1000;
+padding:15px;
+background:rgba(0,0,0,0.5);
+position:sticky;
+top:0;
 }
 
-.navbar a {
-margin:0 10px;
+nav a{
+color:white;
+margin:10px;
 text-decoration:none;
-color:#0072ff;
 font-weight:bold;
 }
 
-/* CARD */
-.card {
-background:white;
-margin:20px;
-padding:20px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-opacity:0;
-transform:translateY(40px);
-transition:0.6s;
+/* HERO */
+.hero{
+text-align:center;
+padding:80px 20px;
 }
 
-.card.show {
-opacity:1;
-transform:translateY(0);
+.hero h1{
+font-size:40px;
 }
 
-/* SERVICES */
-.service {
-border-left:5px solid #0072ff;
-padding:10px;
-margin:10px 0;
-background:#f9fbff;
-border-radius:8px;
-}
-
-.service h3 {
-margin:0;
-color:#0072ff;
-}
-
-.service p {
-margin:5px 0;
-}
-
-/* FORM */
-form {
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-input {
-padding:12px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-button {
-padding:12px;
-background:#0072ff;
-color:white;
+.btn{
+padding:12px 20px;
+margin:10px;
+background:#00c6ff;
+color:black;
 border:none;
-border-radius:8px;
+border-radius:5px;
 cursor:pointer;
+font-weight:bold;
 }
 
-/* GALLERY */
-.gallery {
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-gap:10px;
+/* SECTION */
+section{
+padding:40px;
 }
 
-.gallery img {
-width:100%;
+/* CARDS */
+.card{
+background:rgba(255,255,255,0.1);
+padding:20px;
+margin:15px;
 border-radius:10px;
 }
 
-/* FLOAT BUTTONS */
-.call-btn,.wa-btn {
-position:fixed;
-bottom:20px;
-width:50px;
-height:50px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:24px;
-color:white;
-text-decoration:none;
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-.call-btn {left:20px;background:#0072ff;}
-.wa-btn {right:20px;background:#25D366;}
-
 /* FOOTER */
-footer {
-text-align:center;
+footer{
+background:black;
 padding:20px;
-background:#0072ff;
-color:white;
+text-align:center;
+}
+
+/* FLOAT BUTTONS */
+.call{
+position:fixed;
+bottom:80px;
+right:20px;
+background:green;
+padding:15px;
+border-radius:50%;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50%;
 }
 
 </style>
@@ -145,126 +116,115 @@ color:white;
 <body>
 
 <!-- NAVBAR -->
-<div class="navbar">
-<h3>🦷 Harsha Dental</h3>
+<nav>
+<div><b>Harsha Dental</b></div>
 <div>
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#doctors">Doctors</a>
+<a href="#contact">Contact</a>
 </div>
-</div>
+</nav>
 
 <!-- HERO -->
-<div class="card">
+<div class="hero" id="home">
 <h1>Harsha Multi-Speciality Dental Clinic</h1>
-<p>Healthy Smile Starts Here 😁</p>
+<p>Best Dental Clinic in Kakinada | Advanced & Painless Treatments</p>
 
-<a href="tel:6302962577">📞 Call Now</a><br><br>
-<a href="https://maps.google.com/?q=Harsha+Multi+Speciality+Dental+Clinic+Kakinada">📍 View Location</a>
+<a href="tel:6302962577">
+<button class="btn">📞 Call Now</button>
+</a>
+
+<a href="https://wa.me/916302962577?text=I%20want%20appointment">
+<button class="btn">💬 Book on WhatsApp</button>
+</a>
 </div>
 
-<!-- DOCTORS -->
-<div class="card">
-<h2>👨‍⚕ Doctors</h2>
-
-<p><b>Dr. V.S.K. Sri Harsha</b><br>
-B.D.S (RIMS), M.D.S (Endo)<br>
-Regd No: A21717</p>
-
-<p><b>Dr. V. Sowmya</b><br>
-B.D.S<br>
-Regd No: A24986</p>
-
-</div>
-
-<!-- TIMINGS -->
-<div class="card">
-<h2>⏰ Timings</h2>
-<p>Monday - Saturday: 9:30 AM – 9:00 PM</p>
-<p>Sunday: 9:30 AM – 1:00 PM</p>
-</div>
+<!-- ABOUT -->
+<section id="about">
+<h2>About Clinic</h2>
+<p>
+We provide advanced dental care with modern equipment and painless treatment methods.
+Our goal is to give healthy smiles with affordable care.
+</p>
+</section>
 
 <!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
+
+<div class="grid">
+
+<div class="card">Root Canal Treatment (Painless)</div>
+<div class="card">Dental Implants</div>
+<div class="card">Teeth Whitening</div>
+<div class="card">Smile Designing</div>
+<div class="card">Fillings & Sealants</div>
+<div class="card">Extractions</div>
+<div class="card">Dentures & Bridges</div>
+<div class="card">Laser Dentistry</div>
+<div class="card">Pediatric Dental Care</div>
+<div class="card">Oral Surgery</div>
+<div class="card">X-Ray</div>
+<div class="card">Emergency Care</div>
+
+</div>
+</section>
+
+<!-- DOCTORS -->
+<section id="doctors">
+<h2>Our Doctors</h2>
+
+<div class="grid">
+
 <div class="card">
-<h2>🦷 Our Services</h2>
-
-<div class="service"><h3>Teeth Whitening</h3><p>Brighten your smile professionally.</p></div>
-<div class="service"><h3>Dental Implants</h3><p>Permanent tooth replacement.</p></div>
-<div class="service"><h3>Smile Designing</h3><p>Perfect your smile.</p></div>
-<div class="service"><h3>Root Canal</h3><p>Painless treatment.</p></div>
-<div class="service"><h3>Teeth Cleaning</h3><p>Healthy gums.</p></div>
-<div class="service"><h3>Oral Surgery</h3><p>Advanced procedures.</p></div>
-
+<h3>Dr. V.S.K. Sri Harsha</h3>
+<p>B.D.S, M.D.S (Endo)</p>
+<p>Root Canal Specialist</p>
+<p>Regd No: A21717</p>
 </div>
 
-<!-- BOOKING -->
 <div class="card">
-<h2>📅 Book Appointment</h2>
-
-<form onsubmit="sendWhatsApp(); return false;">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="tel" id="phone" placeholder="Mobile Number" required>
-<input type="text" id="problem" placeholder="Problem" required>
-
-<button type="submit">Book via WhatsApp</button>
-</form>
-</div>
-
-<!-- GALLERY -->
-<div class="card">
-<h2>📸 Clinic Gallery</h2>
-
-<div class="gallery">
-<img src="clinic1.jpg.jpeg">
-<img src="clinic2.jpg.jpeg">
-<img src="clinic3.jpg.jpeg">
-<img src="clinic4.jpg.jpeg">
-<img src="doctor.jpg.jpeg">
-<img src="reception.jpg.jpeg">
+<h3>Dr. V. Sowmya</h3>
+<p>B.D.S</p>
+<p>Cosmetic Dental Surgeon</p>
+<p>Regd No: A24986</p>
 </div>
 
 </div>
+</section>
 
-<!-- REVIEWS -->
-<div class="card">
-<h2>⭐ Reviews</h2>
-<p>⭐⭐⭐⭐⭐ Best dental clinic!</p>
-<p>⭐⭐⭐⭐⭐ Friendly doctors!</p>
-</div>
+<!-- TIMINGS -->
+<section>
+<h2>Clinic Timings</h2>
+<p>Monday - Saturday: 9:30 AM to 9:00 PM</p>
+<p>Sunday: 9:30 AM to 1:00 PM</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Us</h2>
+
+<p>📍 Harsha Multi-Speciality Dental Clinic,<br>
+Sri Lakshmi Complex, Main Road,<br>
+Ganjam Vari Street, Mosque Street,<br>
+Near South India Shopping Mall,<br>
+Kakinada, Andhra Pradesh 533001</p>
+
+<iframe src="https://maps.google.com/maps?q=Harsha%20Multi%20Speciality%20Dental%20Clinic%20Kakinada&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="300"></iframe>
+
+</section>
 
 <!-- FOOTER -->
 <footer>
-<p>© 2026 Harsha Dental Clinic</p>
-<p>Kakinada | 📞 6302962577</p>
+<p>© Harsha Dental Clinic | All Rights Reserved</p>
 </footer>
 
 <!-- FLOAT BUTTONS -->
-<a href="tel:6302962577" class="call-btn">📞</a>
-<a href="https://wa.me/916302962577" class="wa-btn">💬</a>
-
-<!-- SCRIPT -->
-<script>
-function sendWhatsApp(){
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let problem=document.getElementById("problem").value;
-
-let msg=`Appointment:%0AName:${name}%0APhone:${phone}%0AProblem:${problem}`;
-
-window.open(`https://wa.me/916302962577?text=${msg}`);
-}
-
-// animation
-let cards=document.querySelectorAll(".card");
-window.addEventListener("scroll",()=>{
-cards.forEach(c=>{
-let pos=c.getBoundingClientRect().top;
-if(pos<window.innerHeight-100){
-c.classList.add("show");
-}
-});
-});
-</script>
+<a href="tel:6302962577" class="call">📞</a>
+<a href="https://wa.me/916302962577" class="whatsapp">💬</a>
 
 </body>
 </html>
