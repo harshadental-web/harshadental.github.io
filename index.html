@@ -91,6 +91,25 @@ box-shadow:0 10px 25px rgba(0,0,0,0.1);
 .service-box p{font-size:14px;opacity:0.9;}
 .service-box span{margin-top:10px;display:block;}
 
+/* WHY SECTION */
+.why-section{
+background:#4f6f8a;
+padding:80px 10%;
+border-radius:20px;
+margin:40px 10%;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.why-box{color:white;}
+.why-box i{font-size:40px;margin-bottom:10px;}
+.why-box p{font-size:14px;opacity:0.9;}
+
 /* DOCTOR */
 .doctor{
 display:flex;
@@ -155,17 +174,12 @@ background:rgba(0,0,0,0.8);
 }
 
 .popup-content{
-background:white;
+background:linear-gradient(135deg,#e0f2fe,#ecfeff);
 padding:25px;
 margin:10% auto;
 width:80%;
-border-radius:10px;
+border-radius:15px;
 white-space:pre-line;
-}
-
-.close{
-float:right;
-cursor:pointer;
 }
 
 /* ANIMATION */
@@ -252,62 +266,39 @@ transform:translateY(0);
 <span>Read More →</span>
 </div>
 
-<div class="service-box blue" onclick="openPopup('clean')">
-<i class="fa-solid fa-brush"></i>
-<h3>Cleaning</h3>
-<p>Maintain oral hygiene</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box green" onclick="openPopup('white')">
-<i class="fa-solid fa-star"></i>
-<h3>Whitening</h3>
-<p>Brighten your smile</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box darkgreen" onclick="openPopup('smile')">
-<i class="fa-solid fa-face-smile"></i>
-<h3>Smile Designing</h3>
-<p>Enhance smile aesthetics</p>
-<span>Read More →</span>
-</div>
-
 </div>
 </section>
 
-<!-- DOCTORS -->
-<section class="fade">
-<h2>Our Doctors</h2>
+<!-- WHY -->
+<section class="fade why-section">
+<h2 style="text-align:center;color:white;">Why Choose Us</h2>
 
-<div class="doctor">
-<img src="doctor.jpg.jpeg" width="100">
-<div>
-<h3>Dr. V.S.K. Sri Harsha</h3>
-<p>BDS, MDS (Endodontist)</p>
-<p>Reg No: A21717</p>
-</div>
-</div>
+<div class="why-grid">
 
-<div class="doctor">
-<img src="doctor.jpg.jpeg" width="100">
-<div>
-<h3>Dr. V. Sowmya</h3>
-<p>BDS (Dental Surgeon)</p>
-<p>Reg No: A24986</p>
-</div>
+<div class="why-box">
+<i class="fa-solid fa-user-doctor"></i>
+<h3>Experienced Dentist</h3>
+<p>Expert care with years of experience.</p>
 </div>
 
-</section>
+<div class="why-box">
+<i class="fa-solid fa-hand-holding-dollar"></i>
+<h3>Affordable</h3>
+<p>Quality treatment at best price.</p>
+</div>
 
-<!-- GALLERY -->
-<section class="fade">
-<h2>Clinic Gallery</h2>
-<div class="gallery">
-<img src="clinic1.jpg.jpeg">
-<img src="clinic2.jpg.jpeg">
-<img src="clinic3.jpg.jpeg">
-<img src="clinic4.jpg.jpeg">
+<div class="why-box">
+<i class="fa-solid fa-tooth"></i>
+<h3>Advanced Care</h3>
+<p>Modern equipment and techniques.</p>
+</div>
+
+<div class="why-box">
+<i class="fa-solid fa-shield-heart"></i>
+<h3>Hygiene</h3>
+<p>Strict safety protocols followed.</p>
+</div>
+
 </div>
 </section>
 
@@ -324,7 +315,7 @@ transform:translateY(0);
 
 <br><br>
 
-<iframe src="https://maps.google.com/maps?q=Harsha%20Multi%20Speciality%20Dental%20Clinic%20Kakinada&t=&z=13&output=embed"
+<iframe src="https://maps.google.com/maps?q=Kakinada&t=&z=13&output=embed"
 width="100%" height="300"></iframe>
 
 </section>
@@ -332,13 +323,13 @@ width="100%" height="300"></iframe>
 <!-- POPUP -->
 <div id="popup" class="popup">
 <div class="popup-content">
-<span class="close" onclick="closePopup()">✖</span>
+<span onclick="closePopup()" style="float:right;cursor:pointer;">✖</span>
 <h2 id="title"></h2>
 <p id="desc"></p>
 </div>
 </div>
 
-<!-- FLOAT ICONS -->
+<!-- FLOAT -->
 <a href="tel:6302962577" class="float call"><i class="fa-solid fa-phone"></i></a>
 <a href="https://wa.me/916302962577" class="float whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
 
@@ -350,47 +341,32 @@ let t="",d="";
 
 if(type=="root"){
 t="Root Canal Treatment";
-d="Root canal treatment is used to remove infection inside the tooth and preserve it.\n\nIt involves cleaning the root canals and sealing them safely.\n\n✔ Painless procedure\n✔ Saves natural tooth\n✔ Long-lasting result";
+d="Removes infection and saves the natural tooth.\n\n✔ Painless\n✔ Safe\n✔ Effective";
 }
 
 if(type=="fill"){
 t="Teeth Fillings";
-d="Dental fillings repair teeth damaged by cavities or decay.\n\nThe affected area is cleaned and filled with durable materials.\n\n✔ Restores tooth strength\n✔ Prevents further decay\n✔ Quick procedure";
+d="Repairs cavities and damaged teeth.\n\n✔ Quick\n✔ Durable\n✔ Safe";
 }
 
 if(type=="dentures"){
 t="Dentures";
-d="Dentures are removable appliances that replace missing teeth.\n\nThey are custom-made to provide comfort and natural appearance.\n\n✔ Improves chewing\n✔ Enhances smile\n✔ Comfortable fit";
+d="Replace missing teeth with comfort.\n\n✔ Natural look\n✔ Easy to use\n✔ Affordable";
 }
 
 if(type=="implant"){
 t="Dental Implants";
-d="Dental implants are permanent replacements for missing teeth.\n\nThey act like natural teeth and provide strong support.\n\n✔ Durable solution\n✔ Natural look\n✔ Long-term benefits";
+d="Permanent replacement for missing teeth.\n\n✔ Strong\n✔ Long-lasting\n✔ Natural feel";
 }
 
 if(type=="braces"){
-t="Teeth Braces";
-d="Braces are used to correct crooked or misaligned teeth.\n\nThey gradually align teeth for better function and aesthetics.\n\n✔ Improves bite\n✔ Straightens teeth\n✔ Enhances smile";
+t="Braces";
+d="Correct teeth alignment.\n\n✔ Improves smile\n✔ Better bite\n✔ Effective";
 }
 
 if(type=="aligners"){
-t="Clear Aligners";
-d="Clear aligners are transparent devices used to straighten teeth.\n\nThey are removable and more comfortable than braces.\n\n✔ Nearly invisible\n✔ Easy to use\n✔ Comfortable";
-}
-
-if(type=="clean"){
-t="Teeth Cleaning";
-d="Professional cleaning removes plaque, tartar, and stains.\n\nIt helps maintain oral hygiene and gum health.\n\n✔ Fresh breath\n✔ Healthy gums\n✔ Prevents decay";
-}
-
-if(type=="white"){
-t="Teeth Whitening";
-d="Teeth whitening is a cosmetic procedure to lighten teeth color.\n\nIt removes stains and improves smile brightness.\n\n✔ Safe procedure\n✔ Quick results\n✔ Long-lasting";
-}
-
-if(type=="smile"){
-t="Smile Designing";
-d="Smile designing improves overall appearance of your smile.\n\nIt combines multiple treatments for best results.\n\n✔ Boosts confidence\n✔ Personalized care\n✔ Natural look";
+t="Aligners";
+d="Invisible teeth straightening.\n\n✔ Comfortable\n✔ Removable\n✔ Modern";
 }
 
 document.getElementById("title").innerText=t;
@@ -403,19 +379,9 @@ document.getElementById("popup").style.display="none";
 }
 
 function sendMsg(){
-let n=name.value,p=phone.value,m=msg.value;
-let text=`Name:${n}%0APhone:${p}%0AProblem:${m}`;
+let text=`Name:${name.value}%0APhone:${phone.value}%0AProblem:${msg.value}`;
 window.open(`https://wa.me/916302962577?text=${text}`);
 }
-
-const items=document.querySelectorAll('.fade');
-window.addEventListener('scroll',()=>{
-items.forEach(el=>{
-if(el.getBoundingClientRect().top<window.innerHeight-100){
-el.classList.add('show');
-}
-});
-});
 
 </script>
 
