@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Harsha Multi-Speciality Dental Clinic</title>
+<title>Harsha Dental Clinic</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -15,109 +15,70 @@ body{
 margin:0;
 font-family:'Outfit',sans-serif;
 background:#f4f8fb;
-color:#1e293b;
 }
 
 /* NAV */
 nav{
 display:flex;
 justify-content:space-between;
-padding:20px 50px;
+padding:20px 40px;
 background:white;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
-position:sticky;
-top:0;
-}
-
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#2563eb;
 }
 
 /* HERO */
 .hero{
 display:flex;
-justify-content:space-between;
 align-items:center;
-padding:80px 10%;
+justify-content:space-between;
+padding:60px;
 }
 
 .hero img{
-width:380px;
-border-radius:20px;
+width:350px;
+border-radius:15px;
 }
 
 /* BUTTON */
 .btn{
 background:#2563eb;
 color:white;
-padding:12px 25px;
+padding:10px 20px;
 border:none;
-border-radius:25px;
+border-radius:20px;
 cursor:pointer;
 }
 
-/* SECTION */
-section{padding:70px 10%;}
-
 /* SERVICES */
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+.services{
+padding:50px;
 }
 
-.service-box{
-padding:25px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.box{
+padding:20px;
 border-radius:15px;
 color:white;
 cursor:pointer;
-transition:0.3s;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
-
-.service-box:hover{transform:translateY(-10px);}
 
 .blue{background:#5c8796;}
 .green{background:#7aa889;}
-.darkgreen{background:#2f7d6d;}
-.gray{background:#6b7c85;}
-.blue2{background:#2d5d89;}
-.teal{background:#4b8ca5;}
+.dark{background:#2f7d6d;}
 
-.service-box i{font-size:30px;margin-bottom:10px;}
-.service-box h3{margin:10px 0;}
-.service-box p{font-size:14px;opacity:0.9;}
-.service-box span{margin-top:10px;display:block;}
+.box i{font-size:25px;}
 
-/* WHY SECTION */
-.why-section{
+/* WHY */
+.why{
 background:#4f6f8a;
-padding:80px 10%;
-border-radius:20px;
-margin:40px 10%;
-}
-
-.why-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
+color:white;
+padding:50px;
 text-align:center;
-}
-
-.why-box{color:white;}
-.why-box i{font-size:40px;margin-bottom:10px;}
-.why-box p{font-size:14px;opacity:0.9;}
-
-/* DOCTOR */
-.doctor{
-display:flex;
-gap:20px;
-background:white;
-padding:20px;
-border-radius:15px;
-margin-bottom:15px;
 }
 
 /* GALLERY */
@@ -125,42 +86,13 @@ margin-bottom:15px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:10px;
+padding:50px;
 }
 
 .gallery img{
 width:100%;
 border-radius:10px;
 }
-
-/* FORM */
-form{
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-input,textarea{
-padding:12px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-/* FLOAT ICONS */
-.float{
-position:fixed;
-bottom:20px;
-width:55px;
-height:55px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:22px;
-}
-
-.call{left:20px;background:#2563eb;}
-.whatsapp{right:20px;background:#25D366;}
 
 /* POPUP */
 .popup{
@@ -170,29 +102,32 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.8);
+background:rgba(0,0,0,0.7);
 }
 
-.popup-content{
-background:linear-gradient(135deg,#e0f2fe,#ecfeff);
-padding:25px;
+.popup-box{
+background:#e0f2fe;
 margin:10% auto;
-width:80%;
-border-radius:15px;
-white-space:pre-line;
+padding:20px;
+width:70%;
+border-radius:10px;
 }
 
-/* ANIMATION */
-.fade{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
+/* FLOAT */
+.float{
+position:fixed;
+bottom:20px;
+width:50px;
+height:50px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
 }
 
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
+.call{left:20px;background:#2563eb;}
+.wa{right:20px;background:#25D366;}
 
 </style>
 </head>
@@ -202,185 +137,79 @@ transform:translateY(0);
 <!-- NAV -->
 <nav>
 <h2>🦷 Harsha Dental</h2>
-<div>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
 <div>
-<h1>Advanced Dental Care in Kakinada</h1>
+<h1>Advanced Dental Care</h1>
 <p>Painless treatments with modern technology</p>
-<a href="tel:6302962577"><button class="btn">Book Appointment</button></a>
+<button class="btn">Book Appointment</button>
 </div>
-<img src="clinic1.jpg.jpeg">
+
+<img src="https://images.unsplash.com/photo-1588776814546-ec7e4f8a5d1b">
 </div>
 
 <!-- SERVICES -->
-<section id="services" class="fade">
-<h2>Our Treatments</h2>
+<div class="services">
+<h2>Our Services</h2>
 
-<div class="services-grid">
+<div class="grid">
 
-<div class="service-box blue" onclick="openPopup('root')">
+<div class="box blue" onclick="openPop('Root Canal','Root canal removes infection and saves tooth safely.')">
 <i class="fa-solid fa-tooth"></i>
 <h3>Root Canal</h3>
-<p>Painless treatment to save infected teeth</p>
-<span>Read More →</span>
 </div>
 
-<div class="service-box green" onclick="openPopup('fill')">
-<i class="fa-solid fa-tooth"></i>
-<h3>Teeth Fillings</h3>
-<p>Restore cavities and damaged teeth</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box darkgreen" onclick="openPopup('dentures')">
-<i class="fa-solid fa-teeth"></i>
-<h3>Dentures</h3>
-<p>Replace missing teeth comfortably</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box gray" onclick="openPopup('implant')">
+<div class="box green" onclick="openPop('Implants','Permanent solution for missing teeth.')">
 <i class="fa-solid fa-screwdriver-wrench"></i>
-<h3>Dental Implants</h3>
-<p>Permanent solution for missing teeth</p>
-<span>Read More →</span>
+<h3>Implants</h3>
 </div>
 
-<div class="service-box blue2" onclick="openPopup('braces')">
-<i class="fa-solid fa-teeth-open"></i>
-<h3>Braces</h3>
-<p>Correct misaligned teeth</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box teal" onclick="openPopup('aligners')">
-<i class="fa-solid fa-face-smile"></i>
-<h3>Aligners</h3>
-<p>Invisible teeth straightening</p>
-<span>Read More →</span>
+<div class="box dark" onclick="openPop('Cleaning','Removes plaque and keeps gums healthy.')">
+<i class="fa-solid fa-brush"></i>
+<h3>Cleaning</h3>
 </div>
 
 </div>
-</section>
+</div>
 
 <!-- WHY -->
-<section class="fade why-section">
-<h2 style="text-align:center;color:white;">Why Choose Us</h2>
-
-<div class="why-grid">
-
-<div class="why-box">
-<i class="fa-solid fa-user-doctor"></i>
-<h3>Experienced Dentist</h3>
-<p>Expert care with years of experience.</p>
+<div class="why">
+<h2>Why Choose Us</h2>
+<p>Experienced doctors • Advanced care • Hygienic clinic • Affordable pricing</p>
 </div>
 
-<div class="why-box">
-<i class="fa-solid fa-hand-holding-dollar"></i>
-<h3>Affordable</h3>
-<p>Quality treatment at best price.</p>
+<!-- GALLERY -->
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1588776814546-ec7e4f8a5d1b">
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
+<img src="https://images.unsplash.com/photo-1588774069410-84ae30757c8e">
 </div>
-
-<div class="why-box">
-<i class="fa-solid fa-tooth"></i>
-<h3>Advanced Care</h3>
-<p>Modern equipment and techniques.</p>
-</div>
-
-<div class="why-box">
-<i class="fa-solid fa-shield-heart"></i>
-<h3>Hygiene</h3>
-<p>Strict safety protocols followed.</p>
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="fade">
-<h2>Book Appointment</h2>
-
-<form onsubmit="sendMsg(); return false;">
-<input id="name" placeholder="Name" required>
-<input id="phone" placeholder="Phone" required>
-<textarea id="msg" placeholder="Problem"></textarea>
-<button class="btn">Book via WhatsApp</button>
-</form>
-
-<br><br>
-
-<iframe src="https://maps.google.com/maps?q=Kakinada&t=&z=13&output=embed"
-width="100%" height="300"></iframe>
-
-</section>
 
 <!-- POPUP -->
-<div id="popup" class="popup">
-<div class="popup-content">
-<span onclick="closePopup()" style="float:right;cursor:pointer;">✖</span>
-<h2 id="title"></h2>
-<p id="desc"></p>
+<div class="popup" id="pop">
+<div class="popup-box">
+<h2 id="t"></h2>
+<p id="d"></p>
+<button onclick="closePop()">Close</button>
 </div>
 </div>
 
 <!-- FLOAT -->
-<a href="tel:6302962577" class="float call"><i class="fa-solid fa-phone"></i></a>
-<a href="https://wa.me/916302962577" class="float whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+<div class="float call"><i class="fa-solid fa-phone"></i></div>
+<div class="float wa"><i class="fa-brands fa-whatsapp"></i></div>
 
 <script>
 
-function openPopup(type){
-
-let t="",d="";
-
-if(type=="root"){
-t="Root Canal Treatment";
-d="Removes infection and saves the natural tooth.\n\n✔ Painless\n✔ Safe\n✔ Effective";
+function openPop(title,desc){
+document.getElementById("t").innerText=title;
+document.getElementById("d").innerText=desc;
+document.getElementById("pop").style.display="block";
 }
 
-if(type=="fill"){
-t="Teeth Fillings";
-d="Repairs cavities and damaged teeth.\n\n✔ Quick\n✔ Durable\n✔ Safe";
-}
-
-if(type=="dentures"){
-t="Dentures";
-d="Replace missing teeth with comfort.\n\n✔ Natural look\n✔ Easy to use\n✔ Affordable";
-}
-
-if(type=="implant"){
-t="Dental Implants";
-d="Permanent replacement for missing teeth.\n\n✔ Strong\n✔ Long-lasting\n✔ Natural feel";
-}
-
-if(type=="braces"){
-t="Braces";
-d="Correct teeth alignment.\n\n✔ Improves smile\n✔ Better bite\n✔ Effective";
-}
-
-if(type=="aligners"){
-t="Aligners";
-d="Invisible teeth straightening.\n\n✔ Comfortable\n✔ Removable\n✔ Modern";
-}
-
-document.getElementById("title").innerText=t;
-document.getElementById("desc").innerText=d;
-document.getElementById("popup").style.display="block";
-}
-
-function closePopup(){
-document.getElementById("popup").style.display="none";
-}
-
-function sendMsg(){
-let text=`Name:${name.value}%0APhone:${phone.value}%0AProblem:${msg.value}`;
-window.open(`https://wa.me/916302962577?text=${text}`);
+function closePop(){
+document.getElementById("pop").style.display="none";
 }
 
 </script>
