@@ -6,16 +6,27 @@
 
 <title>Harsha Multi-Speciality Dental Clinic</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
+/* COLORS */
+:root{
+--primary:#7c3aed;
+--secondary:#06b6d4;
+--dark:#0b0f19;
+--text:#e5e7eb;
+}
+
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:#0b0f19;
-color:white;
+background:var(--dark);
+color:var(--text);
 overflow-x:hidden;
 }
 
@@ -50,15 +61,18 @@ text-align:center;
 }
 
 .hero h1{
-font-size:60px;
-background:linear-gradient(90deg,#00c6ff,#0072ff);
+font-family:'Space Grotesk',sans-serif;
+font-size:55px;
+background:linear-gradient(90deg,var(--primary),var(--secondary));
 -webkit-background-clip:text;
 color:transparent;
+animation:fadeUp 1.2s ease;
 }
 
 .hero p{
 opacity:0.7;
 font-size:20px;
+animation:fadeUp 1.8s ease;
 }
 
 /* BUTTON */
@@ -67,14 +81,20 @@ margin-top:20px;
 padding:14px 30px;
 border-radius:30px;
 border:none;
-background:white;
-color:black;
+background:linear-gradient(45deg,var(--primary),var(--secondary));
+color:white;
 cursor:pointer;
+transition:0.4s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 /* SECTION */
 section{
-padding:120px 10%;
+padding:100px 10%;
 }
 
 /* GRID */
@@ -84,46 +104,25 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:40px;
 }
 
-/* SERVICE */
+/* SERVICES */
 .service{
 text-align:center;
-transition:0.5s;
+padding:20px;
+border-radius:20px;
+background:rgba(255,255,255,0.03);
+transition:0.4s;
+cursor:pointer;
 }
 
 .service:hover{
-transform:translateY(-15px);
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
 .service i{
 font-size:30px;
+color:var(--secondary);
 margin-bottom:10px;
-color:#00c6ff;
-}
-
-/* TEXT BLOCK */
-.text-block{
-max-width:700px;
-margin:auto;
-text-align:center;
-}
-
-/* GALLERY */
-.gallery{
-display:flex;
-overflow:auto;
-gap:20px;
-}
-
-.gallery img{
-height:250px;
-border-radius:15px;
-}
-
-/* VIDEO */
-.video{
-margin-top:40px;
-border-radius:20px;
-overflow:hidden;
 }
 
 /* POPUP */
@@ -146,6 +145,55 @@ font-size:30px;
 cursor:pointer;
 }
 
+/* GALLERY */
+.slider{
+display:flex;
+overflow:hidden;
+border-radius:20px;
+}
+
+.slider img{
+width:100%;
+flex-shrink:0;
+}
+
+/* VIDEO */
+.video{
+margin-top:30px;
+border-radius:20px;
+overflow:hidden;
+}
+
+/* SOCIAL */
+.social-box{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.social{
+padding:25px;
+border-radius:20px;
+text-align:center;
+width:220px;
+color:white;
+text-decoration:none;
+transition:0.4s;
+}
+
+.insta{
+background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
+}
+
+.youtube{
+background:#ff0000;
+}
+
+.social:hover{
+transform:translateY(-10px) scale(1.05);
+}
+
 /* FLOAT */
 .float{
 position:fixed;
@@ -156,7 +204,7 @@ padding:15px;
 border-radius:50%;
 }
 
-/* SCROLL ANIMATION */
+/* ANIMATION */
 .fade{
 opacity:0;
 transform:translateY(50px);
@@ -168,6 +216,11 @@ opacity:1;
 transform:translateY(0);
 }
 
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
+}
+
 </style>
 </head>
 
@@ -176,29 +229,20 @@ transform:translateY(0);
 <nav>
 <b>Harsha Dental</b>
 <div>
-<a href="#home">Home</a>
 <a href="#services">Treatments</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
 <!-- HERO -->
-<div class="hero" id="home">
+<div class="hero">
 <h1>Harsha Dental Clinic</h1>
-<p>World-Class Dental Care in Kakinada</p>
+<p>Premium Dental Care in Kakinada</p>
 
 <a href="tel:6302962577">
 <button class="btn">Book Appointment</button>
 </a>
 </div>
-
-<!-- ABOUT -->
-<section class="fade">
-<div class="text-block">
-<h2>Premium Dental Experience</h2>
-<p>We provide advanced, painless, and modern dental treatments using the latest technology.</p>
-</div>
-</section>
 
 <!-- SERVICES -->
 <section id="services" class="fade">
@@ -226,9 +270,9 @@ transform:translateY(0);
 
 <!-- GALLERY -->
 <section class="fade">
-<h2>Clinic</h2>
+<h2>Clinic Gallery</h2>
 
-<div class="gallery">
+<div class="slider">
 <img src="clinic1.jpg.jpeg">
 <img src="clinic2.jpg.jpeg">
 <img src="clinic3.jpg.jpeg">
@@ -245,7 +289,25 @@ transform:translateY(0);
 src="https://www.youtube.com/embed/dQw4w9WgXcQ"
 allowfullscreen></iframe>
 </div>
+</section>
 
+<!-- SOCIAL -->
+<section class="fade">
+<h2 style="text-align:center;">Connect With Us</h2>
+
+<div class="social-box">
+
+<a href="#" class="social insta">
+<i class="fa-brands fa-instagram"></i>
+<p>Instagram</p>
+</a>
+
+<a href="#" class="social youtube">
+<i class="fa-brands fa-youtube"></i>
+<p>YouTube</p>
+</a>
+
+</div>
 </section>
 
 <!-- CONTACT -->
@@ -277,20 +339,20 @@ let t="",d="",details="";
 
 if(type=="root"){
 t="Root Canal";
-d="Advanced painless treatment";
-details="<p>Removes infection and saves natural tooth.</p>";
+d="Painless treatment";
+details="<p>Removes infection and saves tooth.</p>";
 }
 
 if(type=="white"){
 t="Whitening";
-d="Bright smile treatment";
-details="<p>Professional whitening process.</p>";
+d="Bright smile";
+details="<p>Professional whitening.</p>";
 }
 
 if(type=="implant"){
 t="Implants";
-d="Permanent teeth replacement";
-details="<p>Strong and natural solution.</p>";
+d="Permanent solution";
+details="<p>Natural looking teeth replacement.</p>";
 }
 
 document.getElementById("title").innerHTML=t;
@@ -304,7 +366,18 @@ function closePopup(){
 document.getElementById("popup").style.display="none";
 }
 
-/* SCROLL ANIMATION */
+/* SLIDER */
+let i=0;
+setInterval(()=>{
+let slides=document.querySelectorAll(".slider img");
+slides.forEach(img=>{
+img.style.transform=`translateX(-${i*100}%)`;
+});
+i++;
+if(i===slides.length) i=0;
+},3000);
+
+/* SCROLL */
 const items=document.querySelectorAll('.fade');
 
 window.addEventListener('scroll',()=>{
@@ -313,6 +386,16 @@ let pos=el.getBoundingClientRect().top;
 if(pos<window.innerHeight-100){
 el.classList.add('show');
 }
+});
+});
+
+/* SMOOTH SCROLL */
+document.querySelectorAll("a[href^='#']").forEach(anchor=>{
+anchor.addEventListener("click",function(e){
+e.preventDefault();
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+behavior:"smooth"
+});
 });
 });
 
