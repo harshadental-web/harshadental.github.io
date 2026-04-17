@@ -204,7 +204,7 @@ transform:translateY(0);
 <img src="clinic1.jpg.jpeg">
 </div>
 
-<!-- ✅ WHY CHOOSE SECTION (ADDED ONLY) -->
+<!-- WHY CHOOSE -->
 <section class="fade" style="background:#5c8796;color:white;text-align:center;">
 <h2>Why Choose Harsha Dental Clinic</h2>
 
@@ -242,8 +242,6 @@ transform:translateY(0);
 
 </div>
 
-<br><br>
-<img src="clinic2.jpg.jpeg" style="width:300px;border-radius:15px;">
 </section>
 
 <!-- SERVICES -->
@@ -387,36 +385,37 @@ width="100%" height="300"></iframe>
 <script>
 
 function openPopup(type){
+
 let t="",d="";
 
 if(type=="root"){
 t="Root Canal Treatment";
-d="Root canal treatment is used to remove infection inside the tooth and preserve it.";
+d="Root canal treatment is used to remove infection inside the tooth and preserve it.\n\n✔ Painless procedure\n✔ Saves natural tooth\n✔ Long-lasting result";
 }
 
 if(type=="fill"){
 t="Teeth Fillings";
-d="Dental fillings repair teeth damaged by cavities.";
+d="Dental fillings repair teeth damaged by cavities.\n\n✔ Restores tooth strength\n✔ Prevents decay";
 }
 
 if(type=="dentures"){
 t="Dentures";
-d="Dentures are removable appliances that replace missing teeth.";
+d="Dentures replace missing teeth.\n\n✔ Improves chewing\n✔ Enhances smile";
 }
 
 if(type=="implant"){
 t="Dental Implants";
-d="Dental implants are permanent replacements for missing teeth.";
+d="Permanent replacements for missing teeth.\n\n✔ Durable\n✔ Natural look";
 }
 
 if(type=="braces"){
 t="Teeth Braces";
-d="Braces correct crooked or misaligned teeth.";
+d="Correct misaligned teeth.";
 }
 
 if(type=="aligners"){
 t="Clear Aligners";
-d="Transparent devices used to straighten teeth.";
+d="Invisible teeth straightening.";
 }
 
 if(type=="clean"){
@@ -426,12 +425,12 @@ d="Removes plaque and tartar.";
 
 if(type=="white"){
 t="Teeth Whitening";
-d="Lightens teeth color.";
+d="Brightens your smile.";
 }
 
 if(type=="smile"){
 t="Smile Designing";
-d="Improves overall smile aesthetics.";
+d="Enhances smile aesthetics.";
 }
 
 document.getElementById("title").innerText=t;
