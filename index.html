@@ -6,115 +6,98 @@
 
 <title>Harsha Multi-Speciality Dental Clinic</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-/* COLORS */
+/* COLORS (Professional Medical) */
 :root{
 --primary:#0ea5a4;
 --secondary:#2563eb;
---accent:#22c55e;
---dark:#0b1220;
---text:#e2e8f0;
+--light:#f8fafc;
+--text:#1e293b;
 }
 
 body{
 margin:0;
-font-family:'Inter',sans-serif;
-background:linear-gradient(180deg,#0b1220,#020617);
+font-family:'Poppins',sans-serif;
+background:var(--light);
 color:var(--text);
 }
 
-/* NAV */
+/* NAVBAR */
 nav{
-position:fixed;
-width:100%;
-top:0;
 display:flex;
 justify-content:space-between;
-padding:18px 30px;
-background:rgba(0,0,0,0.5);
-backdrop-filter:blur(10px);
+padding:15px 40px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav a{
-color:white;
-margin:0 10px;
+margin:0 15px;
 text-decoration:none;
+color:var(--text);
 }
 
 /* HERO */
 .hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:white;
 text-align:center;
+padding:80px 20px;
 }
 
 .hero h1{
-font-family:'Space Grotesk';
-font-size:50px;
-background:linear-gradient(90deg,var(--primary),var(--secondary));
--webkit-background-clip:text;
-color:transparent;
+font-size:40px;
 }
 
-.hero p{
-opacity:0.8;
-}
-
-/* BUTTON */
 .btn{
-margin-top:20px;
 padding:12px 25px;
-border-radius:25px;
 border:none;
-background:linear-gradient(45deg,var(--primary),var(--secondary));
-color:white;
+border-radius:25px;
+background:white;
+color:var(--primary);
 cursor:pointer;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
+margin-top:20px;
 }
 
 /* SECTION */
 section{
-padding:90px 10%;
+padding:60px 10%;
 }
 
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 /* CARD */
 .card{
-background:rgba(255,255,255,0.03);
+background:white;
 padding:20px;
-border-radius:12px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* SERVICE */
+/* SERVICES */
 .service{
-padding:20px;
 text-align:center;
-border-radius:12px;
-background:rgba(255,255,255,0.03);
-cursor:pointer;
+padding:20px;
+border-radius:10px;
+background:white;
 transition:0.3s;
+cursor:pointer;
 }
 
 .service:hover{
 transform:translateY(-8px);
-border:1px solid var(--primary);
 }
 
 .service i{
@@ -122,6 +105,45 @@ color:var(--primary);
 font-size:25px;
 margin-bottom:10px;
 }
+
+/* STATS */
+.stat{
+text-align:center;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+/* VIDEO */
+.video iframe{
+border-radius:10px;
+}
+
+/* SOCIAL */
+.social{
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.social a{
+padding:15px;
+border-radius:10px;
+color:white;
+text-decoration:none;
+}
+
+.insta{background:#e1306c;}
+.youtube{background:red;}
 
 /* POPUP */
 .popup{
@@ -131,64 +153,23 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:black;
-padding:40px;
+background:rgba(0,0,0,0.8);
+}
+
+.popup-content{
+background:white;
+padding:30px;
+margin:10% auto;
+width:80%;
+border-radius:10px;
 }
 
 .close{
-position:absolute;
-top:20px;
-right:20px;
+float:right;
 cursor:pointer;
 }
 
-/* GALLERY */
-.slider{
-display:flex;
-overflow:hidden;
-border-radius:12px;
-}
-
-.slider img{
-width:100%;
-}
-
-/* VIDEO */
-.video{
-margin-top:20px;
-border-radius:12px;
-overflow:hidden;
-}
-
-/* SOCIAL */
-.social-box{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.social{
-padding:20px;
-border-radius:12px;
-color:white;
-text-decoration:none;
-}
-
-.insta{background:linear-gradient(45deg,#f58529,#dd2a7b);}
-.youtube{background:red;}
-
-/* FLOAT */
-.float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:15px;
-border-radius:50%;
-}
-
-/* FADE */
+/* ANIMATION */
 .fade{
 opacity:0;
 transform:translateY(40px);
@@ -215,9 +196,8 @@ transform:translateY(0);
 
 <!-- HERO -->
 <div class="hero">
-<h1>Harsha Multi-Speciality Dental Clinic</h1>
-<p>Advanced Dental Care with Precision & Comfort</p>
-
+<h1>Advanced Dental Care in Kakinada</h1>
+<p>Painless Treatments | Modern Equipment | Trusted Care</p>
 <a href="tel:6302962577">
 <button class="btn">Book Appointment</button>
 </a>
@@ -226,34 +206,37 @@ transform:translateY(0);
 <!-- STATS -->
 <section class="fade">
 <div class="grid">
-<div class="service"><h2>5000+</h2><p>Patients</p></div>
-<div class="service"><h2>10+</h2><p>Treatments</p></div>
-<div class="service"><h2>100%</h2><p>Satisfaction</p></div>
+<div class="stat"><h2>5000+</h2><p>Patients</p></div>
+<div class="stat"><h2>10+</h2><p>Treatments</p></div>
+<div class="stat"><h2>100%</h2><p>Satisfaction</p></div>
 </div>
+</section>
+
+<!-- ABOUT -->
+<section class="fade">
+<h2>About Us</h2>
+<p>We provide advanced dental care using modern technology with a focus on comfort and precision.</p>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="fade">
-<h2>Treatments</h2>
+<h2>Our Treatments</h2>
 
 <div class="grid">
 
 <div class="service" onclick="openPopup('root')">
 <i class="fa-solid fa-tooth"></i>
-<h3>Root Canal Therapy</h3>
-<p>Painless tooth saving</p>
+<h3>Root Canal</h3>
 </div>
 
 <div class="service" onclick="openPopup('white')">
 <i class="fa-solid fa-star"></i>
-<h3>Teeth Whitening</h3>
-<p>Bright smile</p>
+<h3>Whitening</h3>
 </div>
 
 <div class="service" onclick="openPopup('implant')">
 <i class="fa-solid fa-screwdriver-wrench"></i>
-<h3>Dental Implants</h3>
-<p>Permanent solution</p>
+<h3>Implants</h3>
 </div>
 
 </div>
@@ -261,54 +244,46 @@ transform:translateY(0);
 
 <!-- GALLERY -->
 <section class="fade">
-<h2>Clinic Gallery</h2>
-
-<div class="slider">
+<h2>Gallery</h2>
+<div class="gallery">
 <img src="clinic1.jpg.jpeg">
 <img src="clinic2.jpg.jpeg">
 <img src="clinic3.jpg.jpeg">
 </div>
-
 </section>
 
 <!-- VIDEO -->
 <section class="fade">
 <h2>Clinic Video</h2>
-
 <div class="video">
-<iframe width="100%" height="300"
-src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
 </div>
-
 </section>
 
 <!-- SOCIAL -->
 <section class="fade">
-<h2>Connect With Us</h2>
-
-<div class="social-box">
-<a href="#" class="social insta">Instagram</a>
-<a href="#" class="social youtube">YouTube</a>
+<h2>Follow Us</h2>
+<div class="social">
+<a href="#" class="insta">Instagram</a>
+<a href="#" class="youtube">YouTube</a>
 </div>
-
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="fade">
 <h2>Location</h2>
-
 <iframe src="https://maps.google.com/maps?q=Kakinada&t=&z=13&output=embed"
 width="100%" height="300"></iframe>
 </section>
 
 <!-- POPUP -->
 <div id="popup" class="popup">
+<div class="popup-content">
 <span class="close" onclick="closePopup()">✖</span>
 <h2 id="title"></h2>
 <p id="desc"></p>
 </div>
-
-<a href="https://wa.me/916302962577" class="float">💬</a>
+</div>
 
 <script>
 
@@ -316,7 +291,7 @@ function openPopup(type){
 let t="",d="";
 if(type=="root"){t="Root Canal";d="Painless treatment";}
 if(type=="white"){t="Whitening";d="Bright smile";}
-if(type=="implant"){t="Implants";d="Permanent replacement";}
+if(type=="implant"){t="Implants";d="Permanent solution";}
 document.getElementById("title").innerHTML=t;
 document.getElementById("desc").innerHTML=d;
 document.getElementById("popup").style.display="block";
@@ -326,7 +301,6 @@ function closePopup(){
 document.getElementById("popup").style.display="none";
 }
 
-/* SCROLL */
 const items=document.querySelectorAll('.fade');
 window.addEventListener('scroll',()=>{
 items.forEach(el=>{
@@ -335,17 +309,6 @@ el.classList.add('show');
 }
 });
 });
-
-/* SLIDER */
-let i=0;
-setInterval(()=>{
-let slides=document.querySelectorAll(".slider img");
-slides.forEach(img=>{
-img.style.transform=`translateX(-${i*100}%)`;
-});
-i++;
-if(i===slides.length)i=0;
-},3000);
 
 </script>
 
