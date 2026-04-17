@@ -22,50 +22,33 @@ color:white;
 nav{
 display:flex;
 justify-content:space-between;
-padding:20px 40px;
+padding:20px;
 background:rgba(255,255,255,0.1);
-backdrop-filter:blur(15px);
-position:sticky;
-top:0;
+backdrop-filter:blur(10px);
 }
 
 /* HERO */
 .hero{
 text-align:center;
-padding:100px 20px;
+padding:80px 20px;
 }
 
 .hero h1{
-font-size:55px;
+font-size:45px;
 }
 
-.hero p{
-opacity:0.8;
-}
-
-/* BUTTON */
 .btn{
-padding:14px 30px;
-border-radius:30px;
+padding:12px 25px;
 border:none;
+border-radius:25px;
 background:white;
 color:#0ea5a4;
 cursor:pointer;
-margin-top:20px;
 }
 
 /* SECTION */
 section{
-padding:60px 10%;
-}
-
-/* GLASS CARD */
-.card{
-background:rgba(255,255,255,0.1);
-padding:25px;
-border-radius:20px;
-backdrop-filter:blur(20px);
-margin:20px 0;
+padding:50px 10%;
 }
 
 /* GRID */
@@ -75,35 +58,36 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-/* SERVICE */
-.service{
-text-align:center;
-padding:20px;
-border-radius:15px;
+/* SERVICE CARD */
+.service-card{
 background:rgba(255,255,255,0.1);
-cursor:pointer;
+border-radius:15px;
+overflow:hidden;
+text-align:center;
 transition:0.4s;
 }
 
-.service:hover{
-transform:translateY(-10px) scale(1.05);
+.service-card img{
+width:100%;
+height:180px;
+object-fit:cover;
 }
 
-.service i{
-font-size:30px;
-color:#00f2fe;
+.service-card:hover{
+transform:translateY(-10px) scale(1.03);
 }
 
-/* GALLERY */
-.gallery{
-display:flex;
-gap:15px;
-overflow:auto;
+.service-card h3{
+margin:10px 0;
 }
 
-.gallery img{
-height:200px;
-border-radius:15px;
+.service-card button{
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:#0ea5a4;
+color:white;
+cursor:pointer;
 }
 
 /* POPUP */
@@ -123,6 +107,18 @@ position:absolute;
 top:20px;
 right:20px;
 cursor:pointer;
+}
+
+/* GALLERY */
+.gallery{
+display:flex;
+gap:15px;
+overflow:auto;
+}
+
+.gallery img{
+height:200px;
+border-radius:10px;
 }
 
 /* SOCIAL */
@@ -153,41 +149,60 @@ color:white;
 
 <!-- HERO -->
 <div class="hero">
-<h1>Redefining Dental Care</h1>
-<p>Modern • Painless • Advanced Treatments in Kakinada</p>
+<h1>Harsha Multi-Speciality Dental Clinic</h1>
+<p>Modern | Painless | Advanced Dental Care</p>
 
 <a href="tel:6302962577">
 <button class="btn">Book Appointment</button>
 </a>
 </div>
 
-<!-- ABOUT -->
-<section>
-<div class="card">
-<h2>About Clinic</h2>
-<p>Advanced dental treatments with precision, comfort and modern technology.</p>
-</div>
-</section>
-
 <!-- SERVICES -->
 <section>
-<h2 style="text-align:center;">Treatments</h2>
+<h2 style="text-align:center;">Our Treatments</h2>
 
 <div class="grid">
 
-<div class="service" onclick="openPopup('root')">
-<i class="fa-solid fa-tooth"></i>
-<h3>Root Canal</h3>
+<div class="service-card">
+<img src="root.jpg">
+<h3>Root Canal Treatment</h3>
+<p>Painless tooth-saving procedure</p>
+<button onclick="openPopup('root')">Know More</button>
 </div>
 
-<div class="service" onclick="openPopup('white')">
-<i class="fa-solid fa-star"></i>
-<h3>Whitening</h3>
+<div class="service-card">
+<img src="whitening.jpg">
+<h3>Teeth Whitening</h3>
+<p>Bright smile treatment</p>
+<button onclick="openPopup('white')">Know More</button>
 </div>
 
-<div class="service" onclick="openPopup('implant')">
-<i class="fa-solid fa-screwdriver-wrench"></i>
-<h3>Implants</h3>
+<div class="service-card">
+<img src="implant.jpg">
+<h3>Dental Implants</h3>
+<p>Permanent replacement</p>
+<button onclick="openPopup('implant')">Know More</button>
+</div>
+
+<div class="service-card">
+<img src="smile.jpg">
+<h3>Smile Designing</h3>
+<p>Cosmetic smile makeover</p>
+<button onclick="openPopup('smile')">Know More</button>
+</div>
+
+<div class="service-card">
+<img src="cleaning.jpg">
+<h3>Teeth Cleaning</h3>
+<p>Professional oral care</p>
+<button onclick="openPopup('clean')">Know More</button>
+</div>
+
+<div class="service-card">
+<img src="braces.jpg">
+<h3>Braces & Aligners</h3>
+<p>Teeth alignment solution</p>
+<button onclick="openPopup('braces')">Know More</button>
 </div>
 
 </div>
@@ -195,7 +210,7 @@ color:white;
 
 <!-- GALLERY -->
 <section>
-<h2>Clinic</h2>
+<h2>Clinic Gallery</h2>
 
 <div class="gallery">
 <img src="clinic1.jpg.jpeg">
@@ -226,12 +241,42 @@ color:white;
 <script>
 
 function openPopup(type){
+
 let t="",d="";
-if(type=="root"){t="Root Canal";d="Painless treatment";}
-if(type=="white"){t="Whitening";d="Bright smile";}
-if(type=="implant"){t="Implants";d="Permanent solution";}
-document.getElementById("title").innerHTML=t;
-document.getElementById("desc").innerHTML=d;
+
+if(type=="root"){
+t="Root Canal Treatment";
+d="Removes infection and saves natural tooth.";
+}
+
+if(type=="white"){
+t="Teeth Whitening";
+d="Brightens teeth and removes stains.";
+}
+
+if(type=="implant"){
+t="Dental Implants";
+d="Permanent and strong tooth replacement.";
+}
+
+if(type=="smile"){
+t="Smile Designing";
+d="Enhances overall smile appearance.";
+}
+
+if(type=="clean"){
+t="Teeth Cleaning";
+d="Removes plaque and keeps teeth healthy.";
+}
+
+if(type=="braces"){
+t="Braces & Aligners";
+d="Corrects teeth alignment.";
+}
+
+document.getElementById("title").innerText=t;
+document.getElementById("desc").innerText=d;
+
 document.getElementById("popup").style.display="block";
 }
 
