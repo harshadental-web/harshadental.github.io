@@ -1,378 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Harsha Multi-Speciality Dental Clinic</title>
-
-<!-- FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
-
-<!-- ICONS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-
-body{
-margin:0;
-font-family:'Outfit',sans-serif;
-background:#f4f8fb;
-color:#1e293b;
-}
-
-/* NAV */
-nav{
-display:flex;
-justify-content:space-between;
-padding:20px 50px;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-position:sticky;
-top:0;
-}
-
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#2563eb;
-}
-
-/* HERO */
-.hero{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:80px 10%;
-}
-
-.hero img{
-width:380px;
-border-radius:20px;
-}
-
-/* BUTTON */
-.btn{
-background:#2563eb;
-color:white;
-padding:12px 25px;
-border:none;
-border-radius:25px;
-cursor:pointer;
-}
-
-/* SECTION */
-section{
-padding:70px 10%;
-}
-
-/* SERVICES GRID */
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
-
-/* SERVICE BOX */
-.service-box{
-padding:25px;
-border-radius:15px;
-color:white;
-cursor:pointer;
-transition:0.3s;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-position:relative;
-}
-
-.service-box:hover{
-transform:translateY(-10px);
-}
-
-/* COLORS */
-.blue{background:#5c8796;}
-.green{background:#7aa889;}
-.darkgreen{background:#2f7d6d;}
-.gray{background:#6b7c85;}
-.blue2{background:#2d5d89;}
-.teal{background:#4b8ca5;}
-
-/* ICON */
-.service-box i{
-font-size:30px;
-margin-bottom:10px;
-}
-
-/* TEXT */
-.service-box h3{margin:10px 0;}
-.service-box p{font-size:14px;opacity:0.9;}
-.service-box span{display:block;margin-top:10px;font-size:13px;}
-
-/* DOCTOR */
-.doctor{
-display:flex;
-gap:20px;
-background:white;
-padding:20px;
-border-radius:15px;
-margin-bottom:15px;
-}
-
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:10px;
-}
-
-.gallery img{
-width:100%;
-border-radius:10px;
-}
-
-/* FORM */
-form{
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-input,textarea{
-padding:12px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-/* FLOAT ICONS */
-.float{
-position:fixed;
-bottom:20px;
-width:55px;
-height:55px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:22px;
-}
-
-.call{left:20px;background:#2563eb;}
-.whatsapp{right:20px;background:#25D366;}
-
-/* POPUP */
-.popup{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-}
-
-.popup-content{
-background:white;
-padding:25px;
-margin:10% auto;
-width:80%;
-border-radius:10px;
-white-space:pre-line;
-}
-
-.close{
-float:right;
-cursor:pointer;
-}
-
-/* ANIMATION */
-.fade{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- NAV -->
-<nav>
-<h2>🦷 Harsha Dental</h2>
-<div>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-<div>
-<h1>Advanced Dental Care in Kakinada</h1>
-<p>Painless treatments with modern technology</p>
-<a href="tel:6302962577"><button class="btn">Book Appointment</button></a>
-</div>
-<img src="clinic1.jpg.jpeg">
-</div>
-
-<!-- SERVICES -->
-<section id="services" class="fade">
-<h2>Our Treatments</h2>
-
-<div class="services-grid">
-
-<div class="service-box blue" onclick="openPopup('root')">
-<i class="fa-solid fa-tooth"></i>
-<h3>Root Canal</h3>
-<p>Save infected teeth with painless treatment</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box green" onclick="openPopup('fill')">
-<i class="fa-solid fa-tooth"></i>
-<h3>Teeth Fillings</h3>
-<p>Repair cavities and restore teeth</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box darkgreen" onclick="openPopup('dentures')">
-<i class="fa-solid fa-teeth"></i>
-<h3>Dentures</h3>
-<p>Replace missing teeth easily</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box gray" onclick="openPopup('implant')">
-<i class="fa-solid fa-screwdriver-wrench"></i>
-<h3>Dental Implants</h3>
-<p>Permanent tooth replacement</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box blue2" onclick="openPopup('braces')">
-<i class="fa-solid fa-teeth-open"></i>
-<h3>Braces</h3>
-<p>Correct teeth alignment</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box teal" onclick="openPopup('aligners')">
-<i class="fa-solid fa-face-smile"></i>
-<h3>Aligners</h3>
-<p>Invisible teeth straightening</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box blue" onclick="openPopup('clean')">
-<i class="fa-solid fa-brush"></i>
-<h3>Cleaning</h3>
-<p>Maintain oral hygiene</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box green" onclick="openPopup('white')">
-<i class="fa-solid fa-star"></i>
-<h3>Whitening</h3>
-<p>Brighten your smile</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box darkgreen" onclick="openPopup('smile')">
-<i class="fa-solid fa-face-smile"></i>
-<h3>Smile Designing</h3>
-<p>Enhance smile aesthetics</p>
-<span>Read More →</span>
-</div>
-
-</div>
-</section>
-
-<!-- DOCTORS -->
-<section class="fade">
-<h2>Our Doctors</h2>
-
-<div class="doctor">
-<img src="doctor.jpg.jpeg" width="100">
-<div>
-<h3>Dr. V.S.K. Sri Harsha</h3>
-<p>BDS, MDS (Endodontist)</p>
-<p>Reg No: A21717</p>
-</div>
-</div>
-
-<div class="doctor">
-<img src="doctor.jpg.jpeg" width="100">
-<div>
-<h3>Dr. V. Sowmya</h3>
-<p>BDS (Dental Surgeon)</p>
-<p>Reg No: A24986</p>
-</div>
-</div>
-
-</section>
-
-<!-- GALLERY -->
-<section class="fade">
-<h2>Clinic Gallery</h2>
-<div class="gallery">
-<img src="clinic1.jpg.jpeg">
-<img src="clinic2.jpg.jpeg">
-<img src="clinic3.jpg.jpeg">
-<img src="clinic4.jpg.jpeg">
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="fade">
-<h2>Book Appointment</h2>
-
-<form onsubmit="sendMsg(); return false;">
-<input id="name" placeholder="Name" required>
-<input id="phone" placeholder="Phone" required>
-<textarea id="msg" placeholder="Problem"></textarea>
-<button class="btn">Book via WhatsApp</button>
-</form>
-
-<br><br>
-
-<iframe src="https://maps.google.com/maps?q=Harsha%20Multi%20Speciality%20Dental%20Clinic%20Kakinada&t=&z=13&output=embed"
-width="100%" height="300"></iframe>
-
-</section>
-
-<!-- POPUP -->
-<div id="popup" class="popup">
-<div class="popup-content">
-<span class="close" onclick="closePopup()">✖</span>
-<h2 id="title"></h2>
-<p id="desc"></p>
-</div>
-</div>
-
-<!-- FLOAT -->
-<a href="tel:6302962577" class="float call"><i class="fa-solid fa-phone"></i></a>
-<a href="https://wa.me/916302962577" class="float whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-
 <script>
-
 function openPopup(type){
 
 let t="",d="";
 
-if(type=="root"){t="Root Canal";d="Painless treatment to save tooth.";}
-if(type=="fill"){t="Teeth Fillings";d="Repair cavities and restore teeth.";}
-if(type=="dentures"){t="Dentures";d="Replace missing teeth.";}
-if(type=="implant"){t="Implants";d="Permanent solution for missing teeth.";}
-if(type=="braces"){t="Braces";d="Align crooked teeth.";}
-if(type=="aligners"){t="Aligners";d="Invisible braces.";}
-if(type=="clean"){t="Cleaning";d="Removes plaque and tartar.";}
-if(type=="white"){t="Whitening";d="Bright smile treatment.";}
-if(type=="smile"){t="Smile Designing";d="Improve smile aesthetics.";}
+if(type=="root"){
+t="Root Canal Treatment";
+d="Root canal treatment is an advanced dental procedure used to treat infection inside the tooth.\n\nIt helps in removing damaged pulp, cleaning the root canals, and sealing the tooth.\n\n✔ Painless procedure\n✔ Saves natural tooth\n✔ Long-lasting solution";
+}
+
+if(type=="fill"){
+t="Teeth Fillings";
+d="Dental fillings are used to repair teeth affected by cavities or minor damage.\n\nThe decayed portion is removed and filled with high-quality materials to restore strength.\n\n✔ Restores tooth structure\n✔ Prevents further decay\n✔ Durable results";
+}
+
+if(type=="dentures"){
+t="Dentures";
+d="Dentures are removable dental appliances used to replace missing teeth and surrounding tissues.\n\nThey are custom-made for comfort and natural appearance.\n\n✔ Improves chewing ability\n✔ Enhances smile\n✔ Comfortable fit";
+}
+
+if(type=="implant"){
+t="Dental Implants";
+d="Dental implants are permanent solutions for missing teeth using titanium posts placed in the jawbone.\n\nThey function like natural teeth and provide strong support for artificial teeth.\n\n✔ Natural look\n✔ Strong & durable\n✔ Long-term solution";
+}
+
+if(type=="braces"){
+t="Teeth Braces";
+d="Braces are orthodontic devices used to correct crooked or misaligned teeth.\n\nThey gradually shift teeth into proper alignment for better function and appearance.\n\n✔ Improves bite\n✔ Straightens teeth\n✔ Enhances smile";
+}
+
+if(type=="aligners"){
+t="Clear Aligners";
+d="Clear aligners are modern orthodontic solutions that straighten teeth without metal braces.\n\nThey are transparent, removable, and comfortable to wear.\n\n✔ Nearly invisible\n✔ Easy to maintain\n✔ Comfortable fit";
+}
+
+if(type=="clean"){
+t="Teeth Cleaning";
+d="Teeth cleaning is a preventive procedure that removes plaque, tartar, and stains.\n\nIt helps maintain healthy gums and prevents oral diseases.\n\n✔ Fresh breath\n✔ Healthy gums\n✔ Prevents decay";
+}
+
+if(type=="white"){
+t="Teeth Whitening";
+d="Teeth whitening is a cosmetic dental procedure designed to lighten the color of teeth.\n\nIt removes stains caused by food, drinks, and aging.\n\n✔ Brighter smile\n✔ Safe & effective\n✔ Instant results";
+}
+
+if(type=="smile"){
+t="Smile Designing";
+d="Smile designing is a comprehensive cosmetic procedure to enhance the appearance of your smile.\n\nIt involves multiple treatments tailored to your facial features.\n\n✔ Improves confidence\n✔ Personalized treatment\n✔ Natural results";
+}
 
 document.getElementById("title").innerText=t;
 document.getElementById("desc").innerText=d;
@@ -383,24 +57,4 @@ document.getElementById("popup").style.display="block";
 function closePopup(){
 document.getElementById("popup").style.display="none";
 }
-
-function sendMsg(){
-let n=name.value,p=phone.value,m=msg.value;
-let text=`Name:${n}%0APhone:${p}%0AProblem:${m}`;
-window.open(`https://wa.me/916302962577?text=${text}`);
-}
-
-/* SCROLL */
-const items=document.querySelectorAll('.fade');
-window.addEventListener('scroll',()=>{
-items.forEach(el=>{
-if(el.getBoundingClientRect().top<window.innerHeight-100){
-el.classList.add('show');
-}
-});
-});
-
 </script>
-
-</body>
-</html>
