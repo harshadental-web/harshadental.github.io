@@ -29,12 +29,6 @@ position:sticky;
 top:0;
 }
 
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#2563eb;
-}
-
 /* HERO */
 .hero{
 display:flex;
@@ -87,9 +81,13 @@ box-shadow:0 10px 25px rgba(0,0,0,0.1);
 .teal{background:#4b8ca5;}
 
 .service-box i{font-size:30px;margin-bottom:10px;}
-.service-box h3{margin:10px 0;}
-.service-box p{font-size:14px;opacity:0.9;}
-.service-box span{margin-top:10px;display:block;}
+
+/* WHY IMAGE SECTION */
+.why-img{
+width:100%;
+border-radius:20px;
+margin-top:40px;
+}
 
 /* DOCTOR */
 .doctor{
@@ -155,29 +153,12 @@ background:rgba(0,0,0,0.8);
 }
 
 .popup-content{
-background:white;
+background:linear-gradient(135deg,#e0f2fe,#ecfeff);
 padding:25px;
 margin:10% auto;
 width:80%;
-border-radius:10px;
+border-radius:15px;
 white-space:pre-line;
-}
-
-.close{
-float:right;
-cursor:pointer;
-}
-
-/* ANIMATION */
-.fade{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
 }
 
 </style>
@@ -188,10 +169,6 @@ transform:translateY(0);
 <!-- NAV -->
 <nav>
 <h2>🦷 Harsha Dental</h2>
-<div>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</div>
 </nav>
 
 <!-- HERO -->
@@ -201,11 +178,12 @@ transform:translateY(0);
 <p>Painless treatments with modern technology</p>
 <a href="tel:6302962577"><button class="btn">Book Appointment</button></a>
 </div>
-<img src="clinic1.jpg.jpeg">
+
+<img src="https://images.unsplash.com/photo-1588776814546-ec7e4f8a5d1b">
 </div>
 
 <!-- SERVICES -->
-<section id="services" class="fade">
+<section>
 <h2>Our Treatments</h2>
 
 <div class="services-grid">
@@ -213,134 +191,63 @@ transform:translateY(0);
 <div class="service-box blue" onclick="openPopup('root')">
 <i class="fa-solid fa-tooth"></i>
 <h3>Root Canal</h3>
-<p>Painless treatment to save infected teeth</p>
-<span>Read More →</span>
 </div>
 
 <div class="service-box green" onclick="openPopup('fill')">
 <i class="fa-solid fa-tooth"></i>
 <h3>Teeth Fillings</h3>
-<p>Restore cavities and damaged teeth</p>
-<span>Read More →</span>
 </div>
 
 <div class="service-box darkgreen" onclick="openPopup('dentures')">
 <i class="fa-solid fa-teeth"></i>
 <h3>Dentures</h3>
-<p>Replace missing teeth comfortably</p>
-<span>Read More →</span>
 </div>
 
 <div class="service-box gray" onclick="openPopup('implant')">
 <i class="fa-solid fa-screwdriver-wrench"></i>
-<h3>Dental Implants</h3>
-<p>Permanent solution for missing teeth</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box blue2" onclick="openPopup('braces')">
-<i class="fa-solid fa-teeth-open"></i>
-<h3>Braces</h3>
-<p>Correct misaligned teeth</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box teal" onclick="openPopup('aligners')">
-<i class="fa-solid fa-face-smile"></i>
-<h3>Aligners</h3>
-<p>Invisible teeth straightening</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box blue" onclick="openPopup('clean')">
-<i class="fa-solid fa-brush"></i>
-<h3>Cleaning</h3>
-<p>Maintain oral hygiene</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box green" onclick="openPopup('white')">
-<i class="fa-solid fa-star"></i>
-<h3>Whitening</h3>
-<p>Brighten your smile</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box darkgreen" onclick="openPopup('smile')">
-<i class="fa-solid fa-face-smile"></i>
-<h3>Smile Designing</h3>
-<p>Enhance smile aesthetics</p>
-<span>Read More →</span>
+<h3>Implants</h3>
 </div>
 
 </div>
+
+<!-- WHY IMAGE (YOUR PROVIDED DESIGN) -->
+<img class="why-img" src="https://images.unsplash.com/photo-1588776814546-ec7e4f8a5d1b">
+
 </section>
 
 <!-- DOCTORS -->
-<section class="fade">
+<section>
 <h2>Our Doctors</h2>
 
 <div class="doctor">
-<img src="doctor.jpg.jpeg" width="100">
+<img src="https://randomuser.me/api/portraits/men/32.jpg" width="100">
 <div>
-<h3>Dr. V.S.K. Sri Harsha</h3>
-<p>BDS, MDS (Endodontist)</p>
-<p>Reg No: A21717</p>
-</div>
-</div>
-
-<div class="doctor">
-<img src="doctor.jpg.jpeg" width="100">
-<div>
-<h3>Dr. V. Sowmya</h3>
-<p>BDS (Dental Surgeon)</p>
-<p>Reg No: A24986</p>
+<h3>Dr. Sri Harsha</h3>
+<p>BDS, MDS</p>
 </div>
 </div>
 
 </section>
 
 <!-- GALLERY -->
-<section class="fade">
+<section>
 <h2>Clinic Gallery</h2>
+
 <div class="gallery">
-<img src="clinic1.jpg.jpeg">
-<img src="clinic2.jpg.jpeg">
-<img src="clinic3.jpg.jpeg">
-<img src="clinic4.jpg.jpeg">
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
+<img src="https://images.unsplash.com/photo-1588774069410-84ae30757c8e">
 </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="fade">
-<h2>Book Appointment</h2>
-
-<form onsubmit="sendMsg(); return false;">
-<input id="name" placeholder="Name" required>
-<input id="phone" placeholder="Phone" required>
-<textarea id="msg" placeholder="Problem"></textarea>
-<button class="btn">Book via WhatsApp</button>
-</form>
-
-<br><br>
-
-<iframe src="https://maps.google.com/maps?q=Harsha%20Multi%20Speciality%20Dental%20Clinic%20Kakinada&t=&z=13&output=embed"
-width="100%" height="300"></iframe>
 
 </section>
 
 <!-- POPUP -->
 <div id="popup" class="popup">
 <div class="popup-content">
-<span class="close" onclick="closePopup()">✖</span>
+<span onclick="closePopup()" style="float:right;cursor:pointer;">✖</span>
 <h2 id="title"></h2>
 <p id="desc"></p>
 </div>
 </div>
-
-<!-- FLOAT ICONS -->
-<a href="tel:6302962577" class="float call"><i class="fa-solid fa-phone"></i></a>
-<a href="https://wa.me/916302962577" class="float whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script>
 
@@ -349,48 +256,23 @@ function openPopup(type){
 let t="",d="";
 
 if(type=="root"){
-t="Root Canal Treatment";
-d="Root canal treatment is used to remove infection inside the tooth and preserve it.\n\nIt involves cleaning the root canals and sealing them safely.\n\n✔ Painless procedure\n✔ Saves natural tooth\n✔ Long-lasting result";
+t="Root Canal";
+d="Removes infection and saves tooth.\n\n✔ Painless\n✔ Safe\n✔ Effective";
 }
 
 if(type=="fill"){
-t="Teeth Fillings";
-d="Dental fillings repair teeth damaged by cavities or decay.\n\nThe affected area is cleaned and filled with durable materials.\n\n✔ Restores tooth strength\n✔ Prevents further decay\n✔ Quick procedure";
+t="Fillings";
+d="Repair cavities and restore teeth.\n\n✔ Quick\n✔ Durable\n✔ Safe";
 }
 
 if(type=="dentures"){
 t="Dentures";
-d="Dentures are removable appliances that replace missing teeth.\n\nThey are custom-made to provide comfort and natural appearance.\n\n✔ Improves chewing\n✔ Enhances smile\n✔ Comfortable fit";
+d="Replace missing teeth.\n\n✔ Comfortable\n✔ Natural look\n✔ Affordable";
 }
 
 if(type=="implant"){
-t="Dental Implants";
-d="Dental implants are permanent replacements for missing teeth.\n\nThey act like natural teeth and provide strong support.\n\n✔ Durable solution\n✔ Natural look\n✔ Long-term benefits";
-}
-
-if(type=="braces"){
-t="Teeth Braces";
-d="Braces are used to correct crooked or misaligned teeth.\n\nThey gradually align teeth for better function and aesthetics.\n\n✔ Improves bite\n✔ Straightens teeth\n✔ Enhances smile";
-}
-
-if(type=="aligners"){
-t="Clear Aligners";
-d="Clear aligners are transparent devices used to straighten teeth.\n\nThey are removable and more comfortable than braces.\n\n✔ Nearly invisible\n✔ Easy to use\n✔ Comfortable";
-}
-
-if(type=="clean"){
-t="Teeth Cleaning";
-d="Professional cleaning removes plaque, tartar, and stains.\n\nIt helps maintain oral hygiene and gum health.\n\n✔ Fresh breath\n✔ Healthy gums\n✔ Prevents decay";
-}
-
-if(type=="white"){
-t="Teeth Whitening";
-d="Teeth whitening is a cosmetic procedure to lighten teeth color.\n\nIt removes stains and improves smile brightness.\n\n✔ Safe procedure\n✔ Quick results\n✔ Long-lasting";
-}
-
-if(type=="smile"){
-t="Smile Designing";
-d="Smile designing improves overall appearance of your smile.\n\nIt combines multiple treatments for best results.\n\n✔ Boosts confidence\n✔ Personalized care\n✔ Natural look";
+t="Implants";
+d="Permanent tooth replacement.\n\n✔ Strong\n✔ Long-lasting\n✔ Natural";
 }
 
 document.getElementById("title").innerText=t;
@@ -401,21 +283,6 @@ document.getElementById("popup").style.display="block";
 function closePopup(){
 document.getElementById("popup").style.display="none";
 }
-
-function sendMsg(){
-let n=name.value,p=phone.value,m=msg.value;
-let text=`Name:${n}%0APhone:${p}%0AProblem:${m}`;
-window.open(`https://wa.me/916302962577?text=${text}`);
-}
-
-const items=document.querySelectorAll('.fade');
-window.addEventListener('scroll',()=>{
-items.forEach(el=>{
-if(el.getBoundingClientRect().top<window.innerHeight-100){
-el.classList.add('show');
-}
-});
-});
 
 </script>
 
