@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
 body{
 margin:0;
 font-family:'Outfit',sans-serif;
@@ -86,7 +85,7 @@ box-shadow:0 10px 25px rgba(0,0,0,0.1);
 .blue2{background:#2d5d89;}
 .teal{background:#4b8ca5;}
 
-.service-box i{font-size:30px;margin-bottom:10px;}
+.service-box img{width:40px;margin-bottom:10px;}
 .service-box h3{margin:10px 0;}
 .service-box p{font-size:14px;opacity:0.9;}
 .service-box span{margin-top:10px;display:block;}
@@ -179,7 +178,6 @@ transition:1s;
 opacity:1;
 transform:translateY(0);
 }
-
 </style>
 </head>
 
@@ -201,132 +199,74 @@ transform:translateY(0);
 <p>Painless treatments with modern technology</p>
 <a href="tel:6302962577"><button class="btn">Book Appointment</button></a>
 </div>
-<img src="clinic1.jpg.jpeg">
+<img src="clinic1.jpg.jpeg" alt="Clinic Image">
 </div>
+
+<!-- WHY CHOOSE US -->
+<section class="fade">
+<h2>Why Choose Us</h2>
+<img src="sattva-dental.jpg" alt="Why Sattva Dental" style="width:100%;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+</section>
 
 <!-- SERVICES -->
 <section id="services" class="fade">
 <h2>Our Treatments</h2>
-
 <div class="services-grid">
-
-<div class="service-box blue" onclick="openPopup('root')">
-<i class="fa-solid fa-tooth"></i>
-<h3>Root Canal</h3>
-<p>Painless treatment to save infected teeth</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box green" onclick="openPopup('fill')">
-<i class="fa-solid fa-tooth"></i>
-<h3>Teeth Fillings</h3>
-<p>Restore cavities and damaged teeth</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box darkgreen" onclick="openPopup('dentures')">
-<i class="fa-solid fa-teeth"></i>
-<h3>Dentures</h3>
-<p>Replace missing teeth comfortably</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box gray" onclick="openPopup('implant')">
-<i class="fa-solid fa-screwdriver-wrench"></i>
-<h3>Dental Implants</h3>
-<p>Permanent solution for missing teeth</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box blue2" onclick="openPopup('braces')">
-<i class="fa-solid fa-teeth-open"></i>
-<h3>Braces</h3>
-<p>Correct misaligned teeth</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box teal" onclick="openPopup('aligners')">
-<i class="fa-solid fa-face-smile"></i>
-<h3>Aligners</h3>
-<p>Invisible teeth straightening</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box blue" onclick="openPopup('clean')">
-<i class="fa-solid fa-brush"></i>
-<h3>Cleaning</h3>
-<p>Maintain oral hygiene</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box green" onclick="openPopup('white')">
-<i class="fa-solid fa-star"></i>
-<h3>Whitening</h3>
-<p>Brighten your smile</p>
-<span>Read More →</span>
-</div>
-
-<div class="service-box darkgreen" onclick="openPopup('smile')">
-<i class="fa-solid fa-face-smile"></i>
-<h3>Smile Designing</h3>
-<p>Enhance smile aesthetics</p>
-<span>Read More →</span>
-</div>
-
+  <!-- Example service with image -->
+  <div class="service-box blue" onclick="openPopup('root')">
+    <img src="icons/root-canal.png" alt="Root Canal Icon">
+    <h3>Root Canal</h3>
+    <p>Painless treatment to save infected teeth</p>
+    <span>Read More →</span>
+  </div>
+  <!-- Repeat for other services -->
 </div>
 </section>
 
 <!-- DOCTORS -->
 <section class="fade">
 <h2>Our Doctors</h2>
-
 <div class="doctor">
-<img src="doctor.jpg.jpeg" width="100">
+<img src="doctor.jpg.jpeg" width="100" alt="Doctor Image">
 <div>
 <h3>Dr. V.S.K. Sri Harsha</h3>
 <p>BDS, MDS (Endodontist)</p>
 <p>Reg No: A21717</p>
 </div>
 </div>
-
 <div class="doctor">
-<img src="doctor.jpg.jpeg" width="100">
+<img src="doctor.jpg.jpeg" width="100" alt="Doctor Image">
 <div>
 <h3>Dr. V. Sowmya</h3>
 <p>BDS (Dental Surgeon)</p>
 <p>Reg No: A24986</p>
 </div>
 </div>
-
 </section>
 
 <!-- GALLERY -->
 <section class="fade">
 <h2>Clinic Gallery</h2>
 <div class="gallery">
-<img src="clinic1.jpg.jpeg">
-<img src="clinic2.jpg.jpeg">
-<img src="clinic3.jpg.jpeg">
-<img src="clinic4.jpg.jpeg">
+<img src="clinic1.jpg.jpeg" alt="Clinic Photo">
+<img src="clinic2.jpg.jpeg" alt="Clinic Photo">
+<img src="clinic3.jpg.jpeg" alt="Clinic Photo">
+<img src="clinic4.jpg.jpeg" alt="Clinic Photo">
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="fade">
 <h2>Book Appointment</h2>
-
 <form onsubmit="sendMsg(); return false;">
 <input id="name" placeholder="Name" required>
 <input id="phone" placeholder="Phone" required>
 <textarea id="msg" placeholder="Problem"></textarea>
 <button class="btn">Book via WhatsApp</button>
 </form>
-
 <br><br>
-
 <iframe src="https://maps.google.com/maps?q=Harsha%20Multi%20Speciality%20Dental%20Clinic%20Kakinada&t=&z=13&output=embed"
 width="100%" height="300"></iframe>
-
 </section>
 
 <!-- POPUP -->
@@ -343,71 +283,22 @@ width="100%" height="300"></iframe>
 <a href="https://wa.me/916302962577" class="float whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script>
-
 function openPopup(type){
-
 let t="",d="";
-
 if(type=="root"){
 t="Root Canal Treatment";
-d="Root canal treatment is used to remove infection inside the tooth and preserve it.\n\nIt involves cleaning the root canals and sealing them safely.\n\n✔ Painless procedure\n✔ Saves natural tooth\n✔ Long-lasting result";
+d="Root canal treatment removes infection and preserves the tooth.\n\n✔ Painless\n✔ Saves natural tooth\n✔ Long-lasting";
 }
-
-if(type=="fill"){
-t="Teeth Fillings";
-d="Dental fillings repair teeth damaged by cavities or decay.\n\nThe affected area is cleaned and filled with durable materials.\n\n✔ Restores tooth strength\n✔ Prevents further decay\n✔ Quick procedure";
-}
-
-if(type=="dentures"){
-t="Dentures";
-d="Dentures are removable appliances that replace missing teeth.\n\nThey are custom-made to provide comfort and natural appearance.\n\n✔ Improves chewing\n✔ Enhances smile\n✔ Comfortable fit";
-}
-
-if(type=="implant"){
-t="Dental Implants";
-d="Dental implants are permanent replacements for missing teeth.\n\nThey act like natural teeth and provide strong support.\n\n✔ Durable solution\n✔ Natural look\n✔ Long-term benefits";
-}
-
-if(type=="braces"){
-t="Teeth Braces";
-d="Braces are used to correct crooked or misaligned teeth.\n\nThey gradually align teeth for better function and aesthetics.\n\n✔ Improves bite\n✔ Straightens teeth\n✔ Enhances smile";
-}
-
-if(type=="aligners"){
-t="Clear Aligners";
-d="Clear aligners are transparent devices used to straighten teeth.\n\nThey are removable and more comfortable than braces.\n\n✔ Nearly invisible\n✔ Easy to use\n✔ Comfortable";
-}
-
-if(type=="clean"){
-t="Teeth Cleaning";
-d="Professional cleaning removes plaque, tartar, and stains.\n\nIt helps maintain oral hygiene and gum health.\n\n✔ Fresh breath\n✔ Healthy gums\n✔ Prevents decay";
-}
-
-if(type=="white"){
-t="Teeth Whitening";
-d="Teeth whitening is a cosmetic procedure to lighten teeth color.\n\nIt removes stains and improves smile brightness.\n\n✔ Safe procedure\n✔ Quick results\n✔ Long-lasting";
-}
-
-if(type=="smile"){
-t="Smile Designing";
-d="Smile designing improves overall appearance of your smile.\n\nIt combines multiple treatments for best results.\n\n✔ Boosts confidence\n✔ Personalized care\n✔ Natural look";
-}
-
 document.getElementById("title").innerText=t;
 document.getElementById("desc").innerText=d;
 document.getElementById("popup").style.display="block";
 }
-
-function closePopup(){
-document.getElementById("popup").style.display="none";
-}
-
+function closePopup(){document.getElementById("popup").style.display="none";}
 function sendMsg(){
 let n=name.value,p=phone.value,m=msg.value;
 let text=`Name:${n}%0APhone:${p}%0AProblem:${m}`;
 window.open(`https://wa.me/916302962577?text=${text}`);
 }
-
 const items=document.querySelectorAll('.fade');
 window.addEventListener('scroll',()=>{
 items.forEach(el=>{
@@ -416,7 +307,6 @@ el.classList.add('show');
 }
 });
 });
-
 </script>
 
 </body>
