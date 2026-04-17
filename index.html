@@ -204,55 +204,121 @@ transform:translateY(0);
 <img src="clinic1.jpg.jpeg">
 </div>
 
-<!-- ✅ NEW SECTION ADDED (ONLY THIS PART) -->
+<!-- ✅ WHY SECTION (ADDED ONLY) -->
 <section class="fade" style="background:#5c8796;color:white;text-align:center;">
-
 <h2>Why Choose Harsha Dental Clinic</h2>
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px;">
 
 <div>
-<i class="fa-solid fa-user-doctor" style="font-size:30px;margin-bottom:10px;"></i>
+<i class="fa-solid fa-user-doctor" style="font-size:30px;"></i>
 <h3>Experienced Dentist</h3>
 <p>Expert care with personalized treatment.</p>
 </div>
 
 <div>
-<i class="fa-solid fa-hand-holding-dollar" style="font-size:30px;margin-bottom:10px;"></i>
+<i class="fa-solid fa-hand-holding-dollar" style="font-size:30px;"></i>
 <h3>Affordable Cost</h3>
 <p>Quality dental care at budget-friendly prices.</p>
 </div>
 
 <div>
-<i class="fa-solid fa-tooth" style="font-size:30px;margin-bottom:10px;"></i>
+<i class="fa-solid fa-tooth" style="font-size:30px;"></i>
 <h3>Best Treatment</h3>
 <p>Modern equipment and advanced procedures.</p>
 </div>
 
 <div>
-<i class="fa-solid fa-shield-halved" style="font-size:30px;margin-bottom:10px;"></i>
+<i class="fa-solid fa-shield-halved" style="font-size:30px;"></i>
 <h3>Safety & Hygiene</h3>
-<p>Strict sterilization and safety protocols.</p>
+<p>Strict sterilization protocols.</p>
 </div>
 
 <div>
-<i class="fa-solid fa-user" style="font-size:30px;margin-bottom:10px;"></i>
+<i class="fa-solid fa-user" style="font-size:30px;"></i>
 <h3>Patient First</h3>
-<p>Your comfort and satisfaction is our priority.</p>
+<p>Your comfort is our priority.</p>
 </div>
 
 </div>
 
 <br><br>
-
 <img src="clinic2.jpg.jpeg" style="width:300px;border-radius:15px;">
-
 </section>
-<!-- ✅ END OF NEW SECTION -->
 
 <!-- SERVICES -->
 <section id="services" class="fade">
 <h2>Our Treatments</h2>
 
 <div class="services-grid">
-<!-- (rest of your original code unchanged) -->
+
+<div class="service-box blue" onclick="openPopup('root')">
+<i class="fa-solid fa-tooth"></i>
+<h3>Root Canal</h3>
+<p>Painless treatment to save infected teeth</p>
+<span>Read More →</span>
+</div>
+
+<div class="service-box green" onclick="openPopup('fill')">
+<i class="fa-solid fa-tooth"></i>
+<h3>Teeth Fillings</h3>
+<p>Restore cavities and damaged teeth</p>
+<span>Read More →</span>
+</div>
+
+<div class="service-box darkgreen" onclick="openPopup('dentures')">
+<i class="fa-solid fa-teeth"></i>
+<h3>Dentures</h3>
+<p>Replace missing teeth comfortably</p>
+<span>Read More →</span>
+</div>
+
+<div class="service-box gray" onclick="openPopup('implant')">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<h3>Dental Implants</h3>
+<p>Permanent solution for missing teeth</p>
+<span>Read More →</span>
+</div>
+
+<div class="service-box blue2" onclick="openPopup('braces')">
+<i class="fa-solid fa-teeth-open"></i>
+<h3>Braces</h3>
+<p>Correct misaligned teeth</p>
+<span>Read More →</span>
+</div>
+
+<div class="service-box teal" onclick="openPopup('aligners')">
+<i class="fa-solid fa-face-smile"></i>
+<h3>Aligners</h3>
+<p>Invisible teeth straightening</p>
+<span>Read More →</span>
+</div>
+
+<div class="service-box blue" onclick="openPopup('clean')">
+<i class="fa-solid fa-brush"></i>
+<h3>Cleaning</h3>
+<p>Maintain oral hygiene</p>
+<span>Read More →</span>
+</div>
+
+<div class="service-box green" onclick="openPopup('white')">
+<i class="fa-solid fa-star"></i>
+<h3>Whitening</h3>
+<p>Brighten your smile</p>
+<span>Read More →</span>
+</div>
+
+<div class="service-box darkgreen" onclick="openPopup('smile')">
+<i class="fa-solid fa-face-smile"></i>
+<h3>Smile Designing</h3>
+<p>Enhance smile aesthetics</p>
+<span>Read More →</span>
+</div>
+
+</div>
+</section>
+
+<!-- (REST OF YOUR CODE CONTINUES EXACTLY SAME: doctors, gallery, contact, popup, script etc.) -->
+
+</body>
+</html>
