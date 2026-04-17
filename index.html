@@ -6,26 +6,24 @@
 
 <title>Harsha Multi-Speciality Dental Clinic</title>
 
-<!-- FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
-
-<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 /* COLORS */
 :root{
---primary:#7c3aed;
---secondary:#06b6d4;
---dark:#0b0f19;
---text:#e5e7eb;
+--primary:#0ea5a4;
+--secondary:#2563eb;
+--accent:#22c55e;
+--dark:#0b1220;
+--text:#e2e8f0;
 }
 
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:var(--dark);
+background:linear-gradient(180deg,#0b1220,#020617);
 color:var(--text);
 overflow-x:hidden;
 }
@@ -38,7 +36,7 @@ top:0;
 display:flex;
 justify-content:space-between;
 padding:20px 40px;
-background:rgba(0,0,0,0.4);
+background:rgba(0,0,0,0.5);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
@@ -47,7 +45,7 @@ nav a{
 color:white;
 margin:0 15px;
 text-decoration:none;
-opacity:0.7;
+opacity:0.8;
 }
 
 /* HERO */
@@ -66,16 +64,8 @@ font-size:55px;
 background:linear-gradient(90deg,var(--primary),var(--secondary));
 -webkit-background-clip:text;
 color:transparent;
-animation:fadeUp 1.2s ease;
 }
 
-.hero p{
-opacity:0.7;
-font-size:20px;
-animation:fadeUp 1.8s ease;
-}
-
-/* BUTTON */
 .btn{
 margin-top:20px;
 padding:14px 30px;
@@ -87,43 +77,51 @@ cursor:pointer;
 transition:0.4s;
 }
 
-.btn:hover{
-transform:scale(1.08);
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
+.btn:hover{transform:scale(1.08);}
 
 /* SECTION */
-section{
-padding:100px 10%;
-}
+section{padding:100px 10%;}
 
 /* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
+gap:30px;
 }
 
-/* SERVICES */
+/* CARD */
+.card{
+background:rgba(255,255,255,0.03);
+padding:20px;
+border-radius:15px;
+}
+
+/* SERVICE */
 .service{
 text-align:center;
 padding:20px;
-border-radius:20px;
+border-radius:15px;
 background:rgba(255,255,255,0.03);
-transition:0.4s;
 cursor:pointer;
+transition:0.3s;
 }
 
 .service:hover{
-transform:translateY(-12px) scale(1.03);
-box-shadow:0 20px 40px rgba(0,0,0,0.4);
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
 }
 
-.service i{
-font-size:30px;
-color:var(--secondary);
-margin-bottom:10px;
-}
+.service i{color:var(--primary);font-size:30px;}
+
+/* GALLERY */
+.slider{display:flex;overflow:hidden;border-radius:20px;}
+.slider img{width:100%;}
+
+/* SOCIAL */
+.social-box{display:flex;justify-content:center;gap:20px;}
+.social{padding:20px;border-radius:20px;color:white;text-decoration:none;}
+.insta{background:linear-gradient(45deg,#f58529,#dd2a7b);}
+.youtube{background:red;}
 
 /* POPUP */
 .popup{
@@ -134,77 +132,18 @@ left:0;
 width:100%;
 height:100%;
 background:black;
-padding:50px;
+padding:40px;
 }
 
 .close{
 position:absolute;
-top:20px;
-right:30px;
-font-size:30px;
-cursor:pointer;
-}
-
-/* GALLERY */
-.slider{
-display:flex;
-overflow:hidden;
-border-radius:20px;
-}
-
-.slider img{
-width:100%;
-flex-shrink:0;
-}
-
-/* VIDEO */
-.video{
-margin-top:30px;
-border-radius:20px;
-overflow:hidden;
-}
-
-/* SOCIAL */
-.social-box{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-}
-
-.social{
-padding:25px;
-border-radius:20px;
-text-align:center;
-width:220px;
-color:white;
-text-decoration:none;
-transition:0.4s;
-}
-
-.insta{
-background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
-}
-
-.youtube{
-background:#ff0000;
-}
-
-.social:hover{
-transform:translateY(-10px) scale(1.05);
-}
-
-/* FLOAT */
-.float{
-position:fixed;
-bottom:20px;
 right:20px;
-background:#25D366;
-padding:15px;
-border-radius:50%;
+top:20px;
+cursor:pointer;
+font-size:25px;
 }
 
-/* ANIMATION */
+/* FADE */
 .fade{
 opacity:0;
 transform:translateY(50px);
@@ -214,11 +153,6 @@ transition:1s;
 .fade.show{
 opacity:1;
 transform:translateY(0);
-}
-
-@keyframes fadeUp{
-from{opacity:0; transform:translateY(40px);}
-to{opacity:1; transform:translateY(0);}
 }
 
 </style>
@@ -236,135 +170,116 @@ to{opacity:1; transform:translateY(0);}
 
 <!-- HERO -->
 <div class="hero">
-<h1>Harsha Dental Clinic</h1>
-<p>Premium Dental Care in Kakinada</p>
-
-<a href="tel:6302962577">
-<button class="btn">Book Appointment</button>
-</a>
+<h1>Transform Your Smile</h1>
+<p>Painless & Advanced Dental Care in Kakinada</p>
+<a href="tel:6302962577"><button class="btn">Book Appointment</button></a>
 </div>
+
+<!-- STATS -->
+<section class="fade">
+<div class="grid">
+<div class="service"><h2>5000+</h2><p>Happy Patients</p></div>
+<div class="service"><h2>10+</h2><p>Treatments</p></div>
+<div class="service"><h2>100%</h2><p>Satisfaction</p></div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="fade">
+<h2>About Clinic</h2>
+<p>Advanced dental treatments with modern technology and painless procedures.</p>
+</section>
 
 <!-- SERVICES -->
 <section id="services" class="fade">
-<h2 style="text-align:center;">Treatments</h2>
+<h2>Treatments</h2>
 
 <div class="grid">
-
-<div class="service" onclick="openPopup('root')">
-<i class="fa-solid fa-tooth"></i>
-<h3>Root Canal</h3>
+<div class="service" onclick="openPopup('root')">Root Canal</div>
+<div class="service" onclick="openPopup('white')">Whitening</div>
+<div class="service" onclick="openPopup('implant')">Implants</div>
+<div class="service">Braces</div>
+<div class="service">Cleaning</div>
 </div>
 
-<div class="service" onclick="openPopup('white')">
-<i class="fa-solid fa-star"></i>
-<h3>Whitening</h3>
-</div>
+</section>
 
-<div class="service" onclick="openPopup('implant')">
-<i class="fa-solid fa-screwdriver-wrench"></i>
-<h3>Implants</h3>
-</div>
+<!-- DOCTORS -->
+<section class="fade">
+<h2>Doctors</h2>
+<p>Dr. V.S.K. Sri Harsha – A21717</p>
+<p>Dr. V. Sowmya – A24986</p>
+</section>
 
-</div>
+<!-- REVIEWS -->
+<section class="fade">
+<h2>Reviews</h2>
+<div class="card">⭐⭐⭐⭐⭐ Excellent treatment</div>
+<div class="card">⭐⭐⭐⭐⭐ Very hygienic</div>
 </section>
 
 <!-- GALLERY -->
 <section class="fade">
-<h2>Clinic Gallery</h2>
-
+<h2>Gallery</h2>
 <div class="slider">
 <img src="clinic1.jpg.jpeg">
 <img src="clinic2.jpg.jpeg">
 <img src="clinic3.jpg.jpeg">
-<img src="clinic4.jpg.jpeg">
 </div>
 </section>
 
 <!-- VIDEO -->
 <section class="fade">
 <h2>Clinic Video</h2>
-
-<div class="video">
-<iframe width="100%" height="400"
-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-allowfullscreen></iframe>
-</div>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
 </section>
 
 <!-- SOCIAL -->
 <section class="fade">
-<h2 style="text-align:center;">Connect With Us</h2>
-
+<h2>Connect</h2>
 <div class="social-box">
-
-<a href="#" class="social insta">
-<i class="fa-brands fa-instagram"></i>
-<p>Instagram</p>
-</a>
-
-<a href="#" class="social youtube">
-<i class="fa-brands fa-youtube"></i>
-<p>YouTube</p>
-</a>
-
+<a href="#" class="social insta">Instagram</a>
+<a href="#" class="social youtube">YouTube</a>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="fade">
 <h2>Location</h2>
-
 <iframe src="https://maps.google.com/maps?q=Kakinada&t=&z=13&output=embed"
 width="100%" height="300"></iframe>
-
 </section>
 
 <!-- POPUP -->
 <div id="popup" class="popup">
 <span class="close" onclick="closePopup()">✖</span>
-
-<h1 id="title"></h1>
+<h2 id="title"></h2>
 <p id="desc"></p>
-<div id="details"></div>
-
 </div>
 
-<a href="https://wa.me/916302962577" class="float">💬</a>
-
 <script>
-
-/* POPUP */
 function openPopup(type){
-let t="",d="",details="";
-
-if(type=="root"){
-t="Root Canal";
-d="Painless treatment";
-details="<p>Removes infection and saves tooth.</p>";
-}
-
-if(type=="white"){
-t="Whitening";
-d="Bright smile";
-details="<p>Professional whitening.</p>";
-}
-
-if(type=="implant"){
-t="Implants";
-d="Permanent solution";
-details="<p>Natural looking teeth replacement.</p>";
-}
-
+let t="",d="";
+if(type=="root"){t="Root Canal";d="Painless treatment";}
+if(type=="white"){t="Whitening";d="Bright smile";}
+if(type=="implant"){t="Implants";d="Permanent solution";}
 document.getElementById("title").innerHTML=t;
 document.getElementById("desc").innerHTML=d;
-document.getElementById("details").innerHTML=details;
-
 document.getElementById("popup").style.display="block";
 }
-
 function closePopup(){
 document.getElementById("popup").style.display="none";
 }
+
+/* SCROLL */
+const items=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+items.forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add('show');
+}
+});
+});
 
 /* SLIDER */
 let i=0;
@@ -374,31 +289,8 @@ slides.forEach(img=>{
 img.style.transform=`translateX(-${i*100}%)`;
 });
 i++;
-if(i===slides.length) i=0;
+if(i===slides.length)i=0;
 },3000);
-
-/* SCROLL */
-const items=document.querySelectorAll('.fade');
-
-window.addEventListener('scroll',()=>{
-items.forEach(el=>{
-let pos=el.getBoundingClientRect().top;
-if(pos<window.innerHeight-100){
-el.classList.add('show');
-}
-});
-});
-
-/* SMOOTH SCROLL */
-document.querySelectorAll("a[href^='#']").forEach(anchor=>{
-anchor.addEventListener("click",function(e){
-e.preventDefault();
-document.querySelector(this.getAttribute("href")).scrollIntoView({
-behavior:"smooth"
-});
-});
-});
-
 </script>
 
 </body>
