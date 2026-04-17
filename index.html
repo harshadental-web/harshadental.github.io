@@ -27,6 +27,13 @@ background:white;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 position:sticky;
 top:0;
+z-index:100;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#2563eb;
 }
 
 /* HERO */
@@ -81,8 +88,10 @@ box-shadow:0 10px 25px rgba(0,0,0,0.1);
 .teal{background:#4b8ca5;}
 
 .service-box i{font-size:30px;margin-bottom:10px;}
+.service-box h3{margin:10px 0;}
+.service-box span{margin-top:10px;display:block;}
 
-/* WHY IMAGE SECTION */
+/* WHY IMAGE */
 .why-img{
 width:100%;
 border-radius:20px;
@@ -136,6 +145,7 @@ align-items:center;
 justify-content:center;
 color:white;
 font-size:22px;
+z-index:999;
 }
 
 .call{left:20px;background:#2563eb;}
@@ -161,6 +171,23 @@ border-radius:15px;
 white-space:pre-line;
 }
 
+.close{
+float:right;
+cursor:pointer;
+}
+
+/* ANIMATION */
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
 </style>
 </head>
 
@@ -169,6 +196,10 @@ white-space:pre-line;
 <!-- NAV -->
 <nav>
 <h2>🦷 Harsha Dental</h2>
+<div>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
 <!-- HERO -->
@@ -178,12 +209,11 @@ white-space:pre-line;
 <p>Painless treatments with modern technology</p>
 <a href="tel:6302962577"><button class="btn">Book Appointment</button></a>
 </div>
-
 <img src="https://images.unsplash.com/photo-1588776814546-ec7e4f8a5d1b">
 </div>
 
 <!-- SERVICES -->
-<section>
+<section id="services" class="fade">
 <h2>Our Treatments</h2>
 
 <div class="services-grid">
@@ -191,63 +221,96 @@ white-space:pre-line;
 <div class="service-box blue" onclick="openPopup('root')">
 <i class="fa-solid fa-tooth"></i>
 <h3>Root Canal</h3>
+<span>Read More →</span>
 </div>
 
 <div class="service-box green" onclick="openPopup('fill')">
 <i class="fa-solid fa-tooth"></i>
 <h3>Teeth Fillings</h3>
+<span>Read More →</span>
 </div>
 
 <div class="service-box darkgreen" onclick="openPopup('dentures')">
 <i class="fa-solid fa-teeth"></i>
 <h3>Dentures</h3>
+<span>Read More →</span>
 </div>
 
 <div class="service-box gray" onclick="openPopup('implant')">
 <i class="fa-solid fa-screwdriver-wrench"></i>
-<h3>Implants</h3>
+<h3>Dental Implants</h3>
+<span>Read More →</span>
 </div>
 
 </div>
 
-<!-- WHY IMAGE (YOUR PROVIDED DESIGN) -->
+<!-- WHY IMAGE -->
 <img class="why-img" src="https://images.unsplash.com/photo-1588776814546-ec7e4f8a5d1b">
 
 </section>
 
 <!-- DOCTORS -->
-<section>
+<section class="fade">
 <h2>Our Doctors</h2>
 
 <div class="doctor">
 <img src="https://randomuser.me/api/portraits/men/32.jpg" width="100">
 <div>
-<h3>Dr. Sri Harsha</h3>
-<p>BDS, MDS</p>
+<h3>Dr. V.S.K. Sri Harsha</h3>
+<p>BDS, MDS (Endodontist)</p>
+</div>
+</div>
+
+<div class="doctor">
+<img src="https://randomuser.me/api/portraits/women/44.jpg" width="100">
+<div>
+<h3>Dr. V. Sowmya</h3>
+<p>BDS (Dental Surgeon)</p>
 </div>
 </div>
 
 </section>
 
 <!-- GALLERY -->
-<section>
+<section class="fade">
 <h2>Clinic Gallery</h2>
-
 <div class="gallery">
 <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
 <img src="https://images.unsplash.com/photo-1588774069410-84ae30757c8e">
+<img src="https://images.unsplash.com/photo-1588776814546-ec7e4f8a5d1b">
 </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="fade">
+<h2>Book Appointment</h2>
+
+<form onsubmit="sendMsg(); return false;">
+<input id="name" placeholder="Name" required>
+<input id="phone" placeholder="Phone" required>
+<textarea id="msg" placeholder="Problem"></textarea>
+<button class="btn">Book via WhatsApp</button>
+</form>
+
+<br><br>
+
+<iframe src="https://maps.google.com/maps?q=Kakinada&t=&z=13&output=embed"
+width="100%" height="300"></iframe>
 
 </section>
 
 <!-- POPUP -->
 <div id="popup" class="popup">
 <div class="popup-content">
-<span onclick="closePopup()" style="float:right;cursor:pointer;">✖</span>
+<span class="close" onclick="closePopup()">✖</span>
 <h2 id="title"></h2>
 <p id="desc"></p>
 </div>
 </div>
+
+<!-- FLOAT -->
+<a href="tel:6302962577" class="float call"><i class="fa-solid fa-phone"></i></a>
+<a href="https://wa.me/916302962577" class="float whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script>
 
@@ -256,23 +319,23 @@ function openPopup(type){
 let t="",d="";
 
 if(type=="root"){
-t="Root Canal";
-d="Removes infection and saves tooth.\n\n✔ Painless\n✔ Safe\n✔ Effective";
+t="Root Canal Treatment";
+d="Root canal removes infection and saves natural tooth.\n\n✔ Painless\n✔ Safe\n✔ Long-lasting";
 }
 
 if(type=="fill"){
-t="Fillings";
-d="Repair cavities and restore teeth.\n\n✔ Quick\n✔ Durable\n✔ Safe";
+t="Teeth Fillings";
+d="Repair cavities and restore tooth structure.\n\n✔ Durable\n✔ Quick\n✔ Effective";
 }
 
 if(type=="dentures"){
 t="Dentures";
-d="Replace missing teeth.\n\n✔ Comfortable\n✔ Natural look\n✔ Affordable";
+d="Replace missing teeth comfortably.\n\n✔ Natural look\n✔ Easy to use\n✔ Affordable";
 }
 
 if(type=="implant"){
-t="Implants";
-d="Permanent tooth replacement.\n\n✔ Strong\n✔ Long-lasting\n✔ Natural";
+t="Dental Implants";
+d="Permanent tooth replacement solution.\n\n✔ Strong\n✔ Natural\n✔ Long-term";
 }
 
 document.getElementById("title").innerText=t;
@@ -283,6 +346,20 @@ document.getElementById("popup").style.display="block";
 function closePopup(){
 document.getElementById("popup").style.display="none";
 }
+
+function sendMsg(){
+let text=`Name:${name.value}%0APhone:${phone.value}%0AProblem:${msg.value}`;
+window.open(`https://wa.me/916302962577?text=${text}`);
+}
+
+const items=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+items.forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add('show');
+}
+});
+});
 
 </script>
 
