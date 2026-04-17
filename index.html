@@ -4,25 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Harsha Multi-Speciality Dental Clinic</title>
+<title>Harsha Dental Clinic</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 body{
 margin:0;
-font-family:'Poppins',sans-serif;
-background:#ffffff;
+font-family:'Inter',sans-serif;
+background:#f4f8fb;
 color:#1e293b;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
 display:flex;
 justify-content:space-between;
-align-items:center;
-padding:20px 60px;
+padding:20px 50px;
 background:white;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 position:sticky;
@@ -30,17 +30,16 @@ top:0;
 }
 
 nav a{
-margin-left:20px;
 text-decoration:none;
-color:#0ea5a4;
-font-weight:500;
+margin-left:20px;
+color:#2563eb;
 }
 
 /* HERO */
 .hero{
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
 padding:80px 10%;
 }
 
@@ -50,7 +49,6 @@ max-width:500px;
 
 .hero h1{
 font-size:42px;
-margin-bottom:15px;
 }
 
 .hero p{
@@ -58,19 +56,23 @@ color:#64748b;
 }
 
 .hero img{
-width:400px;
+width:380px;
 border-radius:20px;
 }
 
 /* BUTTON */
 .btn{
-margin-top:20px;
-padding:12px 25px;
-background:#0ea5a4;
+background:#2563eb;
 color:white;
+padding:12px 25px;
 border:none;
 border-radius:25px;
 cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#1d4ed8;
 }
 
 /* SECTION */
@@ -82,28 +84,31 @@ padding:70px 10%;
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+gap:25px;
 }
 
-/* STATS */
-.stat{
-text-align:center;
+/* CARD */
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+transition:0.4s;
 }
 
-.stat h2{
-color:#0ea5a4;
+.card:hover{
+transform:translateY(-8px);
 }
 
 /* SERVICES */
 .service{
-padding:25px;
-border-radius:15px;
-background:#f8fafc;
-transition:0.3s;
+cursor:pointer;
 }
 
-.service:hover{
-transform:translateY(-8px);
+.service i{
+font-size:25px;
+color:#2563eb;
+margin-bottom:10px;
 }
 
 /* DOCTOR */
@@ -111,33 +116,43 @@ transform:translateY(-8px);
 display:flex;
 gap:20px;
 align-items:center;
-background:#f8fafc;
-padding:20px;
-border-radius:15px;
 }
 
-/* WHY */
-.why{
-background:#f8fafc;
-padding:20px;
-border-radius:15px;
+/* FORM */
+form{
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:15px;
+input,textarea{
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
 }
 
-.gallery img{
-width:100%;
-border-radius:10px;
+/* FLOAT ICONS */
+.float{
+position:fixed;
+bottom:20px;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:22px;
 }
 
-/* CONTACT */
-.contact{
-text-align:center;
+.call{
+left:20px;
+background:#2563eb;
+}
+
+.whatsapp{
+right:20px;
+background:#25D366;
 }
 
 /* POPUP */
@@ -153,7 +168,7 @@ background:rgba(0,0,0,0.8);
 
 .popup-content{
 background:white;
-padding:30px;
+padding:25px;
 margin:15% auto;
 width:80%;
 border-radius:10px;
@@ -162,6 +177,18 @@ border-radius:10px;
 .close{
 float:right;
 cursor:pointer;
+}
+
+/* ANIMATION */
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
 }
 
 </style>
@@ -173,7 +200,7 @@ cursor:pointer;
 <nav>
 <h2>🦷 Harsha Dental</h2>
 <div>
-<a href="#services">Treatments</a>
+<a href="#services">Services</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
@@ -181,8 +208,8 @@ cursor:pointer;
 <!-- HERO -->
 <div class="hero">
 <div class="hero-text">
-<h1>Advanced Dental Care in Kakinada</h1>
-<p>Painless treatments with modern technology and expert care.</p>
+<h1>Advanced Dental Care</h1>
+<p>Painless treatments with modern technology</p>
 
 <a href="tel:6302962577">
 <button class="btn">Book Appointment</button>
@@ -192,104 +219,68 @@ cursor:pointer;
 <img src="clinic1.jpg.jpeg">
 </div>
 
-<!-- STATS -->
-<section>
-<div class="grid">
-<div class="stat"><h2>5000+</h2><p>Patients</p></div>
-<div class="stat"><h2>10+</h2><p>Treatments</p></div>
-<div class="stat"><h2>100%</h2><p>Satisfaction</p></div>
-</div>
-</section>
-
 <!-- SERVICES -->
-<section id="services">
-<h2>Our Treatments</h2>
+<section id="services" class="fade">
+<h2>Our Services</h2>
 
 <div class="grid">
 
-<div class="service" onclick="openPopup('root')">
+<div class="card service" onclick="openPopup('root')">
+<i class="fa-solid fa-tooth"></i>
 <h3>Root Canal</h3>
-<p>Painless treatment</p>
 </div>
 
-<div class="service" onclick="openPopup('implant')">
-<h3>Dental Implants</h3>
-<p>Permanent solution</p>
+<div class="card service" onclick="openPopup('implant')">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<h3>Implants</h3>
 </div>
 
-<div class="service" onclick="openPopup('white')">
+<div class="card service" onclick="openPopup('white')">
+<i class="fa-solid fa-star"></i>
 <h3>Whitening</h3>
-<p>Bright smile</p>
 </div>
 
-<div class="service" onclick="openPopup('clean')">
+<div class="card service" onclick="openPopup('clean')">
+<i class="fa-solid fa-brush"></i>
 <h3>Cleaning</h3>
-<p>Healthy gums</p>
 </div>
 
 </div>
 </section>
 
-<!-- DOCTORS -->
-<section>
+<!-- DOCTOR -->
+<section class="fade">
 <h2>Our Doctors</h2>
 
-<div class="doctor">
-<img src="doctor.jpg.jpeg" width="120">
+<div class="card doctor">
+<img src="doctor.jpg.jpeg" width="100">
 <div>
-<h3>Dr. V.S.K. Sri Harsha</h3>
+<h3>Dr. Sri Harsha</h3>
 <p>Reg: A21717</p>
 </div>
 </div>
 
-<div class="doctor">
-<img src="doctor.jpg.jpeg" width="120">
+<div class="card doctor">
+<img src="doctor.jpg.jpeg" width="100">
 <div>
-<h3>Dr. V. Sowmya</h3>
+<h3>Dr. Sowmya</h3>
 <p>Reg: A24986</p>
 </div>
 </div>
 
 </section>
 
-<!-- WHY -->
-<section>
-<h2>Why Choose Us</h2>
-
-<div class="grid">
-<div class="why">✔ Advanced Technology</div>
-<div class="why">✔ Painless Treatment</div>
-<div class="why">✔ Hygiene & Safety</div>
-<div class="why">✔ Experienced Doctors</div>
-</div>
-
-</section>
-
-<!-- GALLERY -->
-<section>
-<h2>Clinic Gallery</h2>
-
-<div class="gallery">
-<img src="clinic1.jpg.jpeg">
-<img src="clinic2.jpg.jpeg">
-<img src="clinic3.jpg.jpeg">
-<img src="clinic4.jpg.jpeg">
-</div>
-
-</section>
-
 <!-- CONTACT -->
-<section id="contact" class="contact">
-<h2>Contact Us</h2>
+<section id="contact" class="fade">
+<h2>Book Appointment</h2>
 
-<a href="tel:6302962577">
-<button class="btn">Call Now</button>
-</a>
+<form onsubmit="sendMsg(); return false;">
+<input id="name" placeholder="Name" required>
+<input id="phone" placeholder="Phone" required>
+<textarea id="msg" placeholder="Problem"></textarea>
 
-<br><br>
-
-<iframe src="https://maps.google.com/maps?q=Kakinada&t=&z=13&output=embed"
-width="100%" height="300"></iframe>
+<button class="btn">Book via WhatsApp</button>
+</form>
 
 </section>
 
@@ -302,13 +293,22 @@ width="100%" height="300"></iframe>
 </div>
 </div>
 
+<!-- FLOAT ICONS -->
+<a href="tel:6302962577" class="float call">
+<i class="fa-solid fa-phone"></i>
+</a>
+
+<a href="https://wa.me/916302962577" class="float whatsapp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
 <script>
 
 function openPopup(type){
 let t="",d="";
 
-if(type=="root"){t="Root Canal";d="Removes infection and saves tooth";}
-if(type=="implant"){t="Implants";d="Permanent natural teeth";}
+if(type=="root"){t="Root Canal";d="Painless treatment";}
+if(type=="implant"){t="Implants";d="Permanent solution";}
 if(type=="white"){t="Whitening";d="Bright smile";}
 if(type=="clean"){t="Cleaning";d="Healthy gums";}
 
@@ -320,6 +320,22 @@ document.getElementById("popup").style.display="block";
 function closePopup(){
 document.getElementById("popup").style.display="none";
 }
+
+function sendMsg(){
+let n=name.value,p=phone.value,m=msg.value;
+let text=`Name:${n}%0APhone:${p}%0AProblem:${m}`;
+window.open(`https://wa.me/916302962577?text=${text}`);
+}
+
+/* SCROLL ANIMATION */
+const items=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+items.forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add('show');
+}
+});
+});
 
 </script>
 
