@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
 body{
 margin:0;
 font-family:'Outfit',sans-serif;
@@ -28,15 +29,24 @@ position:sticky;
 top:0;
 }
 
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#2563eb;
+}
+
 /* HERO */
 .hero{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:80px 10%;
-flex-wrap:wrap;
 }
-.hero img{width:350px;border-radius:20px;}
+
+.hero img{
+width:380px;
+border-radius:20px;
+}
 
 /* BUTTON */
 .btn{
@@ -54,7 +64,7 @@ section{padding:70px 10%;}
 /* SERVICES */
 .services-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
 }
 
@@ -64,8 +74,10 @@ border-radius:15px;
 color:white;
 cursor:pointer;
 transition:0.3s;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
-.service-box:hover{transform:translateY(-8px);}
+
+.service-box:hover{transform:translateY(-10px);}
 
 .blue{background:#5c8796;}
 .green{background:#7aa889;}
@@ -73,6 +85,11 @@ transition:0.3s;
 .gray{background:#6b7c85;}
 .blue2{background:#2d5d89;}
 .teal{background:#4b8ca5;}
+
+.service-box i{font-size:30px;margin-bottom:10px;}
+.service-box h3{margin:10px 0;}
+.service-box p{font-size:14px;opacity:0.9;}
+.service-box span{margin-top:10px;display:block;}
 
 /* DOCTOR */
 .doctor{
@@ -90,55 +107,140 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:10px;
 }
-.gallery img{width:100%;border-radius:10px;}
 
-/* REVIEWS */
-.reviews-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
-.review-card{
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,0.05);
-}
-.review-stars{color:gold;}
-
-/* FORM */
-form{display:flex;flex-direction:column;gap:10px;}
-input,textarea{padding:10px;border-radius:8px;border:1px solid #ccc;}
-
-/* POPUP */
-.popup{
-display:none;
-position:fixed;
-top:0;left:0;
-width:100%;height:100%;
-background:rgba(0,0,0,0.7);
-}
-.popup-content{
-background:white;
-margin:10% auto;
-padding:20px;
-width:80%;
+.gallery img{
+width:100%;
 border-radius:10px;
 }
 
-/* FLOAT */
+/* FORM */
+form{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input,textarea{
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+/* FLOAT ICONS */
 .float{
 position:fixed;
 bottom:20px;
-width:55px;height:55px;
+width:55px;
+height:55px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
 color:white;
+font-size:22px;
 }
+
 .call{left:20px;background:#2563eb;}
 .whatsapp{right:20px;background:#25D366;}
+
+/* POPUP */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+}
+
+.popup-content{
+background:white;
+padding:25px;
+margin:10% auto;
+width:80%;
+border-radius:10px;
+white-space:pre-line;
+}
+
+.close{
+float:right;
+cursor:pointer;
+}
+
+/* ANIMATION */
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ================= REVIEWS (NEW) ================= */
+
+.reviews{
+background:#eef3f7;
+text-align:center;
+}
+
+.reviews h2{
+font-size:36px;
+margin-bottom:10px;
+color:#4b6475;
+}
+
+.reviews p{
+color:#6b7c85;
+max-width:700px;
+margin:auto;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.review-card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+text-align:left;
+}
+
+.review-card p{
+font-size:14px;
+line-height:1.6;
+}
+
+.stars{
+color:#fbbf24;
+margin:10px 0;
+}
+
+.review-user{
+display:flex;
+align-items:center;
+gap:10px;
+margin-top:15px;
+}
+
+.review-user i{
+font-size:30px;
+color:#4b8ca5;
+}
+
+.review-user span{
+display:block;
+font-weight:600;
+color:#1e293b;
+}
 
 </style>
 </head>
@@ -148,6 +250,10 @@ color:white;
 <!-- NAV -->
 <nav>
 <h2>🦷 Harsha Dental</h2>
+<div>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
 <!-- HERO -->
@@ -155,117 +261,98 @@ color:white;
 <div>
 <h1>Advanced Dental Care in Kakinada</h1>
 <p>Painless treatments with modern technology</p>
-<button class="btn">Book Appointment</button>
+<a href="tel:6302962577"><button class="btn">Book Appointment</button></a>
 </div>
 <img src="clinic1.jpg.jpeg">
 </div>
 
-<!-- WHY -->
-<section style="background:#5c8796;color:white;text-align:center;">
-<h2>Why Choose Us</h2>
-<p>Experienced doctors, affordable cost, hygienic care</p>
-</section>
+<!-- REVIEWS (NEW SECTION EXACT STYLE) -->
+<section class="reviews fade">
 
-<!-- EXTRA TRUST -->
-<section style="text-align:center;">
-<h2>Why Patients Trust Us More</h2>
-<p>On-time service, friendly care, modern equipment</p>
-</section>
+<h2>We're Trusted By Your Neighbours & Friends</h2>
+<p>Positive Reviews Across Google & Facebook | 5 Star Rating</p>
+<p>Read why our patients love us. We go above and beyond to deliver quality care.</p>
 
-<!-- SERVICES -->
-<section>
-<h2>Our Treatments</h2>
-<div class="services-grid">
-<div class="service-box blue" onclick="openPopup('Root Canal')">Root Canal</div>
-<div class="service-box green" onclick="openPopup('Fillings')">Fillings</div>
-<div class="service-box darkgreen" onclick="openPopup('Dentures')">Dentures</div>
-<div class="service-box gray" onclick="openPopup('Implants')">Implants</div>
-</div>
-</section>
+<div class="review-grid">
 
-<!-- DOCTORS -->
-<section>
-<h2>Our Doctors</h2>
-<div class="doctor">
-<img src="doctor.jpg.jpeg" width="100">
+<div class="review-card">
+<p>Very clean clinic and doctor is very friendly. Treatment was smooth and painless. Highly recommended for dental care in Kakinada.</p>
+<div class="stars">★★★★★</div>
+<div class="review-user">
+<i class="fa-solid fa-user-group"></i>
 <div>
-<h3>Dr. Harsha</h3>
-<p>BDS, MDS</p>
+<span>Maddi Kavya</span>
 </div>
 </div>
-</section>
-
-<!-- GALLERY -->
-<section>
-<h2>Gallery</h2>
-<div class="gallery">
-<img src="clinic1.jpg.jpeg">
-<img src="clinic2.jpg.jpeg">
-<img src="clinic3.jpg.jpeg">
-</div>
-</section>
-
-<!-- REVIEWS -->
-<section style="text-align:center;">
-<h2>Patient Reviews</h2>
-<div class="reviews-grid">
-
-<div class="review-card">
-<p>Very good treatment</p>
-<div class="review-stars">★★★★★</div>
-<b>Rahul</b>
 </div>
 
 <div class="review-card">
-<p>Nice experience</p>
-<div class="review-stars">★★★★☆</div>
-<b>Priya</b>
+<p>Good experience overall. Staff is polite and equipment is modern. I am satisfied with the treatment provided.</p>
+<div class="stars">★★★★☆</div>
+<div class="review-user">
+<i class="fa-solid fa-user-group"></i>
+<div>
+<span>K. Krishna</span>
+</div>
+</div>
 </div>
 
 <div class="review-card">
-<p>Highly recommended</p>
-<div class="review-stars">★★★★★</div>
-<b>Vikram</b>
+<p>Excellent service and very hygienic clinic. Doctor explained everything clearly before treatment.</p>
+<div class="stars">★★★★★</div>
+<div class="review-user">
+<i class="fa-solid fa-user-group"></i>
+<div>
+<span>K Malathi</span>
+</div>
+</div>
+</div>
+
+<div class="review-card">
+<p>Nice treatment and affordable pricing. Doctor is very professional and caring.</p>
+<div class="stars">★★★★☆</div>
+<div class="review-user">
+<i class="fa-solid fa-user-group"></i>
+<div>
+<span>Karthik K</span>
+</div>
+</div>
+</div>
+
+<div class="review-card">
+<p>Best dental clinic with advanced equipment. Quick and painless service.</p>
+<div class="stars">★★★★★</div>
+<div class="review-user">
+<i class="fa-solid fa-user-group"></i>
+<div>
+<span>N. Goutham</span>
+</div>
+</div>
+</div>
+
+<div class="review-card">
+<p>Very good service and friendly staff. I will definitely visit again.</p>
+<div class="stars">★★★★☆</div>
+<div class="review-user">
+<i class="fa-solid fa-user-group"></i>
+<div>
+<span>V. Abhishek</span>
+</div>
+</div>
 </div>
 
 </div>
 </section>
-
-<!-- CONTACT -->
-<section>
-<h2>Contact</h2>
-<form>
-<input placeholder="Name">
-<input placeholder="Phone">
-<textarea placeholder="Message"></textarea>
-<button class="btn">Send</button>
-</form>
-
-<iframe src="https://maps.google.com/maps?q=Kakinada&t=&z=13&output=embed"
-width="100%" height="250"></iframe>
-
-</section>
-
-<!-- POPUP -->
-<div id="popup" class="popup">
-<div class="popup-content">
-<span onclick="closePopup()">Close</span>
-<h3 id="popupText"></h3>
-</div>
-</div>
-
-<!-- FLOAT -->
-<a href="#" class="float call">📞</a>
-<a href="#" class="float whatsapp">💬</a>
 
 <script>
-function openPopup(text){
-document.getElementById("popup").style.display="block";
-document.getElementById("popupText").innerText=text;
+const items=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+items.forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add('show');
 }
-function closePopup(){
-document.getElementById("popup").style.display="none";
-}
+});
+});
 </script>
 
 </body>
