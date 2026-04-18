@@ -180,7 +180,7 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* ================= REVIEWS (NEW) ================= */
+/* ===== REVIEWS SECTION ===== */
 
 .reviews{
 background:#eef3f7;
@@ -188,7 +188,7 @@ text-align:center;
 }
 
 .reviews h2{
-font-size:36px;
+font-size:32px;
 margin-bottom:10px;
 color:#4b6475;
 }
@@ -203,7 +203,7 @@ margin:auto;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
-margin-top:50px;
+margin-top:40px;
 }
 
 .review-card{
@@ -232,14 +232,12 @@ margin-top:15px;
 }
 
 .review-user i{
-font-size:30px;
+font-size:28px;
 color:#4b8ca5;
 }
 
 .review-user span{
-display:block;
 font-weight:600;
-color:#1e293b;
 }
 
 </style>
@@ -266,94 +264,59 @@ color:#1e293b;
 <img src="clinic1.jpg.jpeg">
 </div>
 
-<!-- REVIEWS (NEW SECTION EXACT STYLE) -->
-<section class="reviews fade">
+<!-- WHY CHOOSE -->
+<section class="fade" style="background:#5c8796;color:white;text-align:center;">
+<h2>Why Choose Harsha Dental Clinic</h2>
+</section>
 
+<!-- SERVICES -->
+<section id="services" class="fade">
+<h2>Our Treatments</h2>
+</section>
+
+<!-- DOCTORS -->
+<section class="fade">
+<h2>Our Doctors</h2>
+</section>
+
+<!-- GALLERY -->
+<section class="fade">
+<h2>Clinic Gallery</h2>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews fade">
 <h2>We're Trusted By Your Neighbours & Friends</h2>
 <p>Positive Reviews Across Google & Facebook | 5 Star Rating</p>
-<p>Read why our patients love us. We go above and beyond to deliver quality care.</p>
+<p>Read why our patients love us. We deliver quality care.</p>
 
 <div class="review-grid">
 
 <div class="review-card">
-<p>Very clean clinic and doctor is very friendly. Treatment was smooth and painless. Highly recommended for dental care in Kakinada.</p>
+<p>Very clean clinic and doctor is very friendly. Treatment was smooth and painless.</p>
 <div class="stars">★★★★★</div>
 <div class="review-user">
 <i class="fa-solid fa-user-group"></i>
-<div>
 <span>Maddi Kavya</span>
 </div>
 </div>
-</div>
 
 <div class="review-card">
-<p>Good experience overall. Staff is polite and equipment is modern. I am satisfied with the treatment provided.</p>
+<p>Good experience overall. Staff is polite and treatment is affordable.</p>
 <div class="stars">★★★★☆</div>
 <div class="review-user">
 <i class="fa-solid fa-user-group"></i>
-<div>
 <span>K. Krishna</span>
-</div>
-</div>
-</div>
-
-<div class="review-card">
-<p>Excellent service and very hygienic clinic. Doctor explained everything clearly before treatment.</p>
-<div class="stars">★★★★★</div>
-<div class="review-user">
-<i class="fa-solid fa-user-group"></i>
-<div>
-<span>K Malathi</span>
-</div>
-</div>
-</div>
-
-<div class="review-card">
-<p>Nice treatment and affordable pricing. Doctor is very professional and caring.</p>
-<div class="stars">★★★★☆</div>
-<div class="review-user">
-<i class="fa-solid fa-user-group"></i>
-<div>
-<span>Karthik K</span>
-</div>
-</div>
-</div>
-
-<div class="review-card">
-<p>Best dental clinic with advanced equipment. Quick and painless service.</p>
-<div class="stars">★★★★★</div>
-<div class="review-user">
-<i class="fa-solid fa-user-group"></i>
-<div>
-<span>N. Goutham</span>
-</div>
-</div>
-</div>
-
-<div class="review-card">
-<p>Very good service and friendly staff. I will definitely visit again.</p>
-<div class="stars">★★★★☆</div>
-<div class="review-user">
-<i class="fa-solid fa-user-group"></i>
-<div>
-<span>V. Abhishek</span>
-</div>
 </div>
 </div>
 
 </div>
 </section>
 
-<script>
-const items=document.querySelectorAll('.fade');
-window.addEventListener('scroll',()=>{
-items.forEach(el=>{
-if(el.getBoundingClientRect().top<window.innerHeight-100){
-el.classList.add('show');
-}
-});
-});
-</script>
+<!-- CONTACT -->
+<section id="contact" class="fade">
+<h2>Book Appointment</h2>
+</section>
 
 </body>
 </html>
